@@ -1,0 +1,4501 @@
+.bracket-layer {
+	background: url("../img/bracket.png") scroll 0 0 transparent;
+	height: 590px;
+	width: 794px;
+	sdisplay: block;
+}
+
+.block {
+	float: left;
+	display: block;
+	background: transparent;
+	height: 547px;
+	width: 120px;
+}
+
+.block-first {
+	float: left;
+	display: block;
+	background: transparent;
+	height: 547px;
+	width: 120px;
+}
+
+.block-semis {
+	float: left;
+	display: block;
+	background: transparent;
+	height: 547px;
+	width: 110px;
+}
+
+.block-finals {
+	float: left;
+	display: block;
+	background: transparent;
+	height: 547px;
+	width: 105px;
+}
+
+.block-nba-finals {
+	float: left;
+	display: block;
+	background: transparent;
+	height: 547px;
+	width: 123px;
+}
+/*
+.top-sep {
+	opacity: 0.01;
+	filter: alpha(opacity = 1);
+	height: 40px;
+	background: green;
+}
+*/
+.sep {
+	opacity: 0.1;
+	filter: alpha(opacity = 1);
+	height: 20px;
+	background: white;
+	float: left;
+}
+
+.team-entry {
+	opacity: 0.8;
+	filter: alpha(opacity = 80);
+	height: 20px;
+	width: 100px;
+	float: left;
+	font-size: 15px;
+	color: blue;
+}
+
+.team-entry-right {
+	opacity: 0.8;
+	filter: alpha(opacity = 80);
+	height: 20px;
+	width: 100px;
+	float: left;
+	text-align: right;
+	font-size: 15px;
+	color: blue;
+}
+
+.bet-entry {
+	/*
+	opacity: 0.8;
+	filter: alpha(opacity = 80);
+	background: green;
+	*/
+	height: 20px;
+	width: 60px;
+	float: left;
+	font-size: 12px;
+	border-style : dotted;
+	border-width : thin;
+}
+
+.champion-entry {
+	height: 25px;
+	font-size: 15px;
+	color: blue;
+	float: left;
+	border-style : dotted;
+	border-width : thin;
+	width: 100px;
+	text-align: left;
+	padding-left: 2px;
+	padding-top: 3px;
+	line-height: 1.5;
+	/*
+	/background: #c0c0c0;
+	*/
+}
+
+
+
+html, body {
+	width: 100%;
+	min-height: 100%;
+	/*
+	font-family: "Helvetica Neue", Helvetica Neue, Helvetica, Arial,
+		Liberation Sans, sans-serif;*/
+	font-family: 'Open Sans', sans-serif;	
+	font-size: 12px;
+}
+
+a:link, a:visited {
+	font-size: 12px;
+	color: white
+}
+
+.header-row {
+	background: transparent
+		url('http://i.cdn.turner.com/nba/nba/.element/img/3.0/sect/searchbar/playoffs-2015/bkgd.png')
+		top center;
+	color: white;
+}
+
+.tournament-wrap {
+	text-align: center;
+	width: 520px;
+	height: 600px;
+}
+
+.round1-wrap, .round2-wrap, .round3-wrap, .round4-wrap {
+	width: 130px;
+	height: 600px;
+	float: right;
+}
+
+.round-sep-block {
+	width: 130px;
+	backgroud: white;
+	float: left;
+}
+
+.round-sep-right {
+	float: right;
+	backgroud: green;
+	width: 130px;
+}
+
+.round-sep-left {
+	float: right;
+	backgroud: red;
+	width: 130px;
+}
+
+.round-entry {
+	line-height: 2;
+	float: left;
+	height: 24px;
+	background: #c0c0c0;
+	width: 110px;
+	font-size: 13px;
+	text-align: left;
+	padding-left: 2px;
+	float: left;
+}
+
+.round-entry-top {
+	border-top: 1px;
+	border-right: 1px;
+}
+
+.round-entry-bottom {
+	border-bottom: 2px;
+	border-right: 1px;
+}
+
+.round-bet {
+	border: 1px solid black;
+	float: left;
+	height: 16px;
+	background: #C0C078;
+	width: 90px;
+	font-size: 11px;
+	text-align: left;
+	padding-left: 1px;
+	float: left;
+	color: blue;
+}
+
+.round-winner {
+	float: right;
+	height: 14px;
+	background: #A6A3A3;
+	width: 100px;
+	font-size: 10px;
+	text-align: right;
+	padding-right: 7px;
+	font-style: italic;
+}
+
+.round1-top {
+	line-height: 2em;
+}
+
+.champion {
+	background: #c0c0c0;
+	width: 130px;
+	height: 25px;
+	font-size: 15px;
+	text-align: left;
+	padding-left: 2px;
+	color: blue;
+	padding-top: 3px;
+	border: 1px solid black;
+	line-height: 1.5;
+}
+
+/*
+*
+*
+*
+*
+*
+*/
+div.table.section {
+	position: relative;
+	overflow: visible;
+	padding: 0 0 0 6px;
+}
+
+table.leagueTable {
+	position: relative;
+	width: 85%;
+	background: #fff;
+	font-weight: bold;
+	border-left: 1px solid #dfebf3;
+	margin-bottom: 20px;
+}
+
+.leagueTable tr {
+	height: 30px;
+	width: 100%;
+}
+
+.leagueTable th {
+	background: #8b95a4;
+	color: #fff;
+	font-size: 12px;
+	width: 42px;
+	text-transform: uppercase;
+	text-align: center;
+	border-right: 1px solid #dfebf3;
+	border-bottom: 1px solid #fff;
+}
+
+.leagueTable th:last-child {
+	border-right: 1px solid #8b95a4;
+}
+
+.leagueTable th.col-club {
+	width: 165px;
+	text-align: left;
+	padding: 0 0 0 6px;
+	position: inherit;
+}
+
+.leagueTable th.col-game {
+	width: 170px;
+	text-align: center;
+	padding: 0 0 0 6px;
+	position: inherit;
+}
+
+/*
+.leagueTable th.col-sort .head {
+	width: 25px;
+	height: 22px;
+	display: inline-block;
+	background: url('images/iconsprite.png') -613px -58px no-repeat;
+}
+*/
+.leagueTable td {
+	color: #666;
+	font-size: 12px;
+	text-align: center;
+	border-right: 1px solid #dfebf3;
+	border-bottom: 1px solid #dfebf3;
+}
+
+.leagueTable td.col-lp {
+	color: #999;
+	font-size: 11px;
+}
+
+.leagueTable td.col-club {
+	color: #333;
+	text-align: left;
+	/*background: url('images/iconsprite.png') no-repeat -396px -296px;*/
+	padding: 0 0 0 6px;
+	position: inherit;
+}
+
+.leagueTable td.col-pld {
+	color: #666;
+	text-align: center;
+}
+
+.leagueTable td.col-pts {
+	color: #4486b4;
+	text-align: center;
+	border-right: 1px solid #dfebf3;
+}
+
+.leagueTable tr.accent1 td {
+	position: inherit;
+	background-color: #8cbde0;
+	color: #fff;
+	border-left: none;
+	border-right: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+}
+
+.leagueTable tr.accent1 td:last-child {
+	border-right: 1px solid #8cbde0;
+}
+
+.leagueTable tr.accent1 td.col-club {
+	background-position: -396px -266px;
+}
+
+.leagueTable tr.accent1 td.col-sort img.up {
+	background-position: -619px -125px;
+}
+
+.leagueTable tr.accent1 td.col-sort img.down {
+	background-position: -619px -95px;
+}
+
+.leagueTable tr.accent1 td.col-sort img.nm {
+	background-position: -619px -215px;
+}
+
+.leagueTable tr.accent2 td {
+	position: inherit;
+	background-color: #c8dceb;
+	border-left: none;
+	border-right: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+}
+
+.leagueTable tr.accent2 td:first-child {
+	border-left: 1px solid #c8dceb;
+}
+
+.leagueTable tr.accent2 td:last-child {
+	border-right: 1px solid #c8dceb;
+}
+
+.leagueTable tr.accent2 td.col-club {
+	background-position: -396px -266px;
+}
+
+.leagueTable tr.accent3 td {
+	position: inherit;
+	background-color: #edf5fa;
+}
+
+.leagueTable tr.accent4 td {
+	position: inherit;
+	background-color: #e0e6e9;
+	border-right: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+}
+
+.leagueTable tr.accent4 td.col-club {
+	background-position: -396px -266px;
+}
+
+.leagueTable tr.accent5 td {
+	position: inherit;
+	background-color: #edf3fa;
+	border-right: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+}
+
+.leagueTable tr.accent6 td {
+	position: inherit;
+	background-color: #e9f5fc;
+	border-right: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+}
+
+.leagueTable tr.accent7 td {
+	position: inherit;
+	background-color: #c6e1f4;
+	border-right: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+}
+
+.leagueTable tr.accent7 td.col-club {
+	background-position: -396px -266px;
+}
+
+.leagueTable td[ajax] {
+	cursor: pointer;
+}
+
+.leagueTable tr.selected-row td {
+	background: #162b48;
+	border-bottom: 1px solid #dfebf3;
+	color: #fff;
+	border-bottom: 0 none;
+}
+
+.leagueTable tr.selected-row td:first-child {
+	border-left: 1px solid #162b48;
+}
+
+.leagueTable tr.selected-row td:last-child {
+	border-right: 1px solid #162b48;
+}
+
+.leagueTable tr.selected-row td[ajax] {
+	background: #162b48 url('images/iconsprite.png') no-repeat right -297px;
+}
+
+.leagueTable tr.selected-row td[ajax].col-club {
+	background-position: -396px -297px;
+}
+
+.leagueTable tr.selected-row td.selected-cell {
+	background: #639ec8;
+	border-bottom: 1px solid #639ec8;
+	color: #fff;
+}
+
+.leagueTable tr.selected-row td.selected-cell:first-child {
+	border-left: 1px solid #639ec8;
+}
+
+.leagueTable tr.selected-row td.selected-cell:last-child {
+	border-right: 1px solid #639ec8;
+}
+
+.leagueTable tr.club-overview {
+	display: none;
+}
+
+.leagueTable tr.club-overview-row {
+	display: none;
+	border-top: 1px solid #dfebf3;
+	border-left: 1px solid #639ec8;
+	border-right: 1px solid #639ec8;
+}
+
+.leagueTable tr.club-overview-row td.overview-row {
+	border-right: 1px solid #639ec8;
+}
+
+.leagueTable tr.club-overview-row td {
+	padding: 0;
+	text-align: left;
+}
+
+#body .leagueTable tr.club-overview-row h3 {
+	color: #fff;
+	text-align: left;
+	margin: 0;
+	padding: 0;
+}
+
+.leagueTable table.home-away-results {
+	width: 100%;
+}
+
+.leagueTable table.home-away-results th {
+	width: 35%;
+}
+
+.leagueTable table.home-away-results th:first-child {
+	width: 30%;
+}
+
+.leagueTable table.home-away-results td:first-child {
+	font-weight: bold;
+}
+
+.leagueTable table.next-3-fixtures {
+	width: 100%;
+}
+
+.leagueTable-GF table.goals-data, .leagueTable-GA table.goals-data {
+	width: 50%;
+	float: left;
+}
+
+.leagueTable-GF table.goals-pitch, .leagueTable-GA table.goals-pitch {
+	width: 50%;
+	float: right;
+}
+
+.leagueTable table.goals-data th {
+	width: 15%;
+}
+
+.leagueTable table.goals-data th:first-child {
+	width: 55%;
+}
+
+.leagueTable table.goals-data td:first-child {
+	font-weight: bold;
+}
+
+.leagueTable-GF table.svg-header, .leagueTable-GA table.svg-header {
+	float: right;
+	width: 355px;
+}
+
+.leagueTable-GF .svg-wrapper, .leagueTable-GA .svg-wrapper {
+	clear: right;
+	float: right;
+	background: #f3f8fb;
+	padding: 5px;
+}
+
+.leagueTable .overview-header {
+	padding: 10px;
+	background: #639ec8;
+}
+
+.leagueTable .overview-sponsor {
+	text-align: right;
+	padding: 5px;
+}
+
+.leagueTable .overview-footer {
+	padding: 5px 10px;
+	background: #639ec8;
+	height: 14px;
+}
+
+.leagueTable .overview-footer img, .leagueTable .overview-footer span {
+	float: right;
+}
+
+.leagueTable .quick-info {
+	width: 710px;
+	min-height: 80px;
+	overflow: hidden;
+	background-color: #d8e6f1;
+	padding-bottom: 0;
+}
+
+.leagueTable .quick-info ul li.info {
+	float: left;
+	padding: 0 0 0 15px;
+	border-right: 1px solid #fff;
+	min-height: 80px;
+}
+
+.leagueTable .quick-info ul li.info:last-child {
+	border-right: 0 none;
+}
+
+#body .leagueTable .quick-info li h4 {
+	margin: 10px 0 5px;
+	color: #4486b4;
+	font-size: 14px;
+	line-height: 1;
+	text-align: left;
+}
+
+.leagueTable .quick-info .info.club-shield {
+	width: 80px;
+	padding: 0;
+	text-align: center;
+}
+
+.leagueTable .quick-info .info.club-shield img {
+	padding-top: 10px;
+}
+
+.leagueTable .quick-info .info.club-links {
+	width: 220px;
+}
+
+.leagueTable .quick-info .info.club-links li {
+	float: left;
+	width: 45%;
+	white-space: nowrap;
+	text-align: left;
+}
+
+#body .leagueTable .quick-info .info.club-links li a {
+	font-size: 11px;
+}
+
+.leagueTable .quick-info .info.next-fixture {
+	width: 220px;
+}
+
+.leagueTable .quick-info .info.next-fixture img.logo {
+	float: left;
+}
+
+.leagueTable .quick-info .info.next-fixture span {
+	float: left;
+	padding: 0 10px 5px;
+}
+
+.leagueTable .quick-info .info.next-fixture span.next-fixture-icons,
+	.leagueTable .quick-info .info.next-fixture span.next-fixture-icons a {
+	float: right;
+}
+
+.win, .won, .WIN, .WON {
+	background: #060;
+	color: #fff;
+	font-size: 11px;
+	font-weight: bold;
+	padding: 0 2px;
+}
+
+.loss, .lost, .LOSS, .LOST {
+	background: #c00;
+	color: #fff;
+	font-size: 11px;
+	font-weight: bold;
+	padding: 0 2px;
+}
+
+.draw, .drawn, .DRAW, .DRAWN {
+	background: #999;
+	color: #fff;
+	font-size: 11px;
+	font-weight: bold;
+	padding: 0 2px;
+}
+
+.col-form span, .form-guide span {
+	font-size: 12px;
+	display: inline-block;
+	width: 1.5em;
+	line-height: 1.5em;
+	height: 1.5em;
+	padding: 0;
+	text-align: center;
+	vertical-align: middle;
+	text-transform: uppercase;
+}
+
+.leagueTable .leagueTable-Club {
+	background-color: #f3f8fb;
+}
+
+.leagueTable .overview-data {
+	width: 710px;
+	display: block;
+	overflow: hidden;
+}
+
+#body .leagueTable .overview-data .sectionTitle {
+	padding: 13px 10px 13px 0;
+	margin: 0;
+	border: 0 none;
+}
+
+#body .leagueTable .overview-data h4 {
+	text-align: left;
+	font-size: 14px;
+	padding: 10px 10px 0;
+}
+
+.leagueTable .leagueTable-Club .playerstowatch {
+	margin-top: 20px;
+}
+
+.leagueTable .leagueTable-Club .playerstowatch p.select {
+	float: right;
+	padding: 8px 10px;
+	margin: 0;
+}
+
+#body .leagueTable .leagueTable-Club .playerstowatch .sectionTitle {
+	background: #dfecf5;
+	padding: 10px 0;
+}
+
+#body .leagueTable .leagueTable-Club .playerstowatch h4 {
+	color: #639ec8;
+}
+
+.leagueTable .leagueTable-Club .playerstowatch table {
+	width: 100%;
+	table-layout: fixed;
+}
+
+.leagueTable .leagueTable-Club .playerstowatch tr {
+	background: #fff;
+}
+
+.leagueTable .leagueTable-Club .playerstowatch th {
+	background: #f3f8fb;
+}
+
+.leagueTable .leagueTable-Club .playerstowatch th.hidden {
+	display: none;
+}
+
+.leagueTable .leagueTable-Club .playerstowatch th.position {
+	width: 140px;
+}
+
+.leagueTable .leagueTable-Club .playerstowatch th.img {
+	width: 23px;
+}
+
+.leagueTable .leagueTable-Club .playerstowatch th.name {
+	width: auto;
+}
+
+.leagueTable .leagueTable-Club .playerstowatch th.stat {
+	width: 85px;
+}
+
+.leagueTable .leagueTable-Club .playerstowatch td {
+	font-weight: bold;
+}
+
+.leagueTable .leagueTable-Club .playerstowatch td.img {
+	padding: 0;
+}
+
+.leagueTable .leagueTable-Club .playerstowatch td.img img {
+	height: 28px;
+}
+
+.leagueTable .leagueTable-Club .playerstowatch .stat {
+	text-align: center;
+}
+
+.leagueTable .leagueTable-Club .playerstowatch [name=fantasy] .total {
+	color: #000;
+}
+
+.leagueTable .leagueTable-Club .playerstowatch [name=eappi] .total {
+	color: #000;
+}
+
+.leagueTable .leagueTable-Club .playerstowatch [name=fanzone] .total {
+	color: #10b3f0;
+}
+
+.leagueTable tr.club-overview-row table th {
+	background: #dfecf5;
+	color: #639ec8;
+	text-indent: 5px;
+	text-align: left;
+	text-transform: none;
+	border: 1px solid #d6dce2;
+	border-right: 0 none;
+}
+
+.leagueTable tr.club-overview-row table tr:hover {
+	background: #e0ecf4;
+}
+
+.leagueTable tr.club-overview-row table td {
+	font-weight: normal;
+	padding: 8px;
+}
+
+.leagueTable .match-info {
+	padding: 10px 0;
+	background-color: #fff;
+}
+
+.leagueTable .match-info-header {
+	background-color: #f3f8fb;
+	color: #639ec8;
+	padding: 10px 15px;
+}
+
+.leagueTable .match-info ul {
+	display: block;
+	margin: 0 0 0 15px;
+	overflow: hidden;
+}
+
+.leagueTable .match-info li {
+	float: left;
+	border-left: 5px solid #c8ddec;
+	height: 30px;
+	padding: 0 25px 0 10px;
+	text-align: left;
+}
+
+.leagueTable .leagueTable-D .match-info li {
+	padding: 0 6px 0 10px;
+}
+
+.leagueTable .match-info li.away-matches {
+	width: 120px;
+}
+
+.leagueTable .match-info li p {
+	margin: 0 0 5px 0;
+	padding: 0;
+	color: #4486b4;
+	font-size: 10px;
+	line-height: 1;
+	text-transform: uppercase;
+}
+
+.leagueTable .match-info li span {
+	color: #162b48;
+	font-size: 16px;
+}
+
+.leagueTable .results-data li {
+	float: right;
+}
+
+.leagueTable .results-data li.block-one {
+	float: left;
+}
+
+.leagueTable .results-data li.block-one .wld {
+	display: inline-block;
+	min-width: 40px;
+	padding: 2px;
+	text-align: center;
+}
+
+.leagueTable .results-data li .result-score {
+	color: #162b48;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 0 5px 0 0;
+}
+
+.leagueTable .results-data li .result-date {
+	font-size: 10px;
+	font-weight: bold;
+}
+
+.leagueTable .leagueTable-W td.cellLOST .results-data li .result-score,
+	.leagueTable .leagueTable-W td.cellDRAWN .results-data li .result-score,
+	.leagueTable .leagueTable-L td.cellWON .results-data li .result-score,
+	.leagueTable .leagueTable-L td.cellDRAWN .results-data li .result-score,
+	.leagueTable .leagueTable-D td.cellLOST .results-data li .result-score,
+	.leagueTable .leagueTable-D td.cellWON .results-data li .result-score,
+	.leagueTable .leagueTable-W td.cell .results-data li .result-date,
+	.leagueTable .leagueTable-L td.cell .results-data li .result-date,
+	.leagueTable .leagueTable-D td.cell .results-data li .result-date {
+	color: #ccc;
+	min-width: 40px;
+	display: inline-block;
+	text-align: center;
+}
+
+.leagueTable .leagueTable-W td.cellLOST .results-data li .wld,
+	.leagueTable .leagueTable-W td.cellDRAWN .results-data li .wld,
+	.leagueTable .leagueTable-L td.cellWON .results-data li .wld,
+	.leagueTable .leagueTable-L td.cellDRAWN .results-data li .wld,
+	.leagueTable .leagueTable-D td.cellLOST .results-data li .wld,
+	.leagueTable .leagueTable-D td.cellWON .results-data li .wld {
+	background: #ccc;
+	color: #fff;
+	min-width: 40px;
+	display: inline-block;
+	text-align: center;
+}
+
+.leagueTable .leagueTable-P td.cell .results-data li .results-detail span.ctalink.disabled,
+	.leagueTable .leagueTable-P td.cellWON .results-data li .results-detail span.ctalink.disabled,
+	.leagueTable .leagueTable-P td.cellLOST .results-data li .results-detail span.ctalink.disabled,
+	.leagueTable .leagueTable-P td.cellDRAWN .results-data li .results-detail span.ctalink.disabled,
+	.leagueTable .leagueTable-W td.cellWON .results-data li .results-detail span.ctalink.disabled,
+	.leagueTable .leagueTable-D td.cellDRAWN .results-data li .results-detail span.ctalink.disabled,
+	.leagueTable .leagueTable-L td.cellLOST .results-data li .results-detail span.ctalink.disabled
+	{
+	display: none;
+}
+
+#body .leagueTable .leagueTable-W td.cellLOST .results-data li .results-detail a.ctalink,
+	#body .leagueTable .leagueTable-W td.cellDRAWN .results-data li .results-detail a.ctalink,
+	#body .leagueTable .leagueTable-W td.cell .results-data li .results-detail a.ctalink,
+	#body .leagueTable .leagueTable-D td.cellWON .results-data li .results-detail a.ctalink,
+	#body .leagueTable .leagueTable-D td.cellLOST .results-data li .results-detail a.ctalink,
+	#body .leagueTable .leagueTable-D td.cell .results-data li .results-detail a.ctalink,
+	#body .leagueTable .leagueTable-L td.cellWON .results-data li .results-detail a.ctalink,
+	#body .leagueTable .leagueTable-L td.cellDRAWN .results-data li .results-detail a.ctalink,
+	#body .leagueTable .leagueTable-L td.cell .results-data li .results-detail a.ctalink
+	{
+	display: none;
+}
+
+.leagueTable tr.club-overview-row .leagueTable-GF th, .leagueTable tr.club-overview-row .leagueTable-GF td,
+	.leagueTable tr.club-overview-row .leagueTable-GA th, .leagueTable tr.club-overview-row .leagueTable-GA td
+	{
+	text-align: center;
+	border: 1px solid #d6dce2;
+}
+
+.leagueTable tr.club-overview-row .leagueTable-GF th:first-child,
+	.leagueTable tr.club-overview-row .leagueTable-GF td:first-child,
+	.leagueTable tr.club-overview-row .leagueTable-GA th:first-child,
+	.leagueTable tr.club-overview-row .leagueTable-GA td:first-child {
+	text-align: left;
+	width: 40%;
+}
+
+body>.eutooltip {
+	display: none;
+	position: absolute;
+	z-index: 100000;
+	top: 0;
+	left: 0;
+	padding: .5em;
+	background: rgba(255, 255, 197, 0.7);
+	border: 1px solid rgba(0, 0, 0, 0.7);
+	width: auto;
+	box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+	border-radius: 3px;
+	font-size: .8em;
+}
+
+.col-club .eucomp {
+	display: none;
+}
+
+.leagueTable .cup {
+	background: transparent url(images/iconsprite.png) -109px -45px
+		no-repeat;
+	width: 16px;
+	height: 16px;
+	margin: 0 0 -0.2em 1em;
+	display: inline-block;
+}
+
+.leagueTable .cup.champions-league {
+	background-position: -109px -74px;
+}
+
+.leagueTable .cup.cup-winners {
+	background-position: -109px -137px;
+}
+
+.leagueTable .cup.europa-league {
+	background-position: -109px -105px;
+}
+
+.leagueTable .cup.intertoto-cup {
+	background-position: -109px -169px;
+}
+
+.leagueTable .cup.uefa-cup {
+	background-position: -109px -105px;
+}
+
+.leagueTable .cup.super-cup {
+	background-position: -109px -20px;
+	width: 0;
+}
+
+.leagueTable .selected-row .cup {
+	display: none;
+}
+
+.leagueTable.cupKey {
+	width: 60%;
+	border: none;
+}
+
+.leagueTable.cupKey tr, .leagueTable.cupKey td {
+	border: none;
+	color: #050528;
+	text-align: left;
+	padding: 5px 0;
+	height: auto;
+}
+
+#body .skyscraper .section.leaguetablesidebar {
+	margin-bottom: 20px;
+}
+
+.leaguetablesidebar table.leagueTable {
+	width: auto;
+}
+
+.leaguetablesidebar .leagueTable tr, .leaguetablesidebar .leagueTable td,
+	.leaguetablesidebar .leagueTable th, .leaguetablesidebar .leagueTable a
+	{
+	font-size: 11px;
+	font-weight: normal;
+	height: 20px;
+	padding: 0;
+}
+
+.leaguetablesidebar .leagueTable th {
+	font-weight: bold;
+	text-transform: none;
+	padding: 0 3px;
+	min-width: 19px;
+}
+
+.leaguetablesidebar img {
+	padding-bottom: 6px;
+}
+
+.leaguetablesidebar table.leagueTable {
+	margin-bottom: 5px;
+}
+
+.leaguetablesidebar p {
+	text-align: left;
+	padding: 0;
+}
+
+.leaguetablesidebar .leagueTable th.col-club, .leaguetablesidebar .leagueTable td.col-club
+	{
+	padding: 0 0 0 6px;
+	min-width: 66px;
+	position: inherit;
+}
+
+.leaguetablesidebar .leagueTable tr.accent1 td.col-club a {
+	color: #fff;
+}
+
+/*
+*
+*
+*/
+
+/* CSS Document */
+@charset "utf-8";
+/* ----------------------------------------------------------------------------
+	SCORESSCHED.CSS 
+	Contains everything specific to the NBA Gameline Scores & Schedules. Do not put any non-Scores/Schedule information in this document.	*/
+/* NOTE: Anything beginning with [*:first-child+html] is an IE7-specific hack */
+/*	----------------------------------------------------------------------------
+	Table Of Contents
+	1. Page Shell		
+	2. Scores Header
+		A. Header Text Area
+		B. Header Select Buttons Area
+		C. Select Date
+			1. Month
+			2. Scroll
+			3. Close
+		D. Select Team
+			1. East Conf
+			2. West Conf
+		E. Today Link
+		F. Date Strip (Film strip)
+			1. Strip Top Text
+			2. Strip Box Module
+			3. Scroll
+			4. Large Date
+	3. Game Module (Common)
+		A. Logos	
+		B. Season Series Text
+	4. Preview Module (Only)
+		A. Top Section
+		B. Bottom Section
+		C. Do Not Display
+	5. Live and Live OT Module (Only)
+		A. Top Section
+		B. Bottom Section
+		C. Do Not Display
+			1. Do Not Display OT
+	6. Recap and Recap OT Module (Only)
+		A. Top Section
+		B. Bottom Section
+		C. Do Not Display
+			1. Do Not Display OT
+	7. Final and Final OT Module (Only)
+		A. Top Section
+		B. Bottom Section
+		C. Do Not Display
+			1. Do Not Display OT
+	8. Shared Styles
+		A. Preview and Live
+		B. Live, Recap, Final, and Overtime
+		C. Live OT and Recap OT
+	9. Team Page
+		A. Header
+		B. Teams & Stats
+		C. Leaders
+		D. Team Logo
+	10. Footer Ads
+
+*/
+/*  ----------------------------------------
+	BACKGROUND AD-SERVED SKIN */
+*:first-child+html #nbaBGSkin {
+	height: 0;
+	overflow: visible;
+}
+
+#wallpaper, #wallpaper a, #wallpaper div {
+	_display: none;
+	_height: 0px !important;
+	_font-size: 0px;
+}
+
+#nbaHeaderAds {
+	float: left;
+	padding: 5px 0 5px 60px;
+	position: relative;
+	width: 100%;
+	background: #929292;
+}
+
+.nbaFixContain {
+	float: left;
+	position: relative;
+	width: 1004px;
+	right: 25px;
+}
+
+#nbaTop728Ad {
+	float: left;
+	margin-right: 2px;
+	position: relative;
+}
+
+#nbaTop200Ad {
+	float: left;
+	margin-left: 2px;
+	position: relative;
+}
+
+/*  -----------------------------------------------------------------------------
+	(1) PAGE SHELL     */
+html>body#gameline {
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+	/*font-family: Arial, Helvetica, sans-serif;*/
+	font-size: 11px;
+}
+
+#nbaHeader, #nbaFooter {
+	font-size: 12px;
+	font-family: 'Open Sans', sans-serif;
+	/*
+	font-family: "Helvetica Neue", Helvetica Neue, Helvetica, Arial,
+		Liberation Sans, sans-serif;*/
+}
+
+#nbaFooter {
+	width: 1000px;
+	margin: auto;
+	text-align: left;
+}
+
+.NBAclear {
+	clear: both;
+}
+
+#nbaMainSection #nbaContent {
+	_overflow-x: hidden;
+	font-size: 11px;
+	width: 1000px;
+}
+
+html>body#gameline #nbaFooterNav {
+	font-size: 1.3em;
+}
+
+#nbaFooter .nbaLegal p {
+	font-size: .85em;
+}
+/*  -----------------------------------------------------------------------------
+	(2) SCORES HEADER  */
+#nbaSSHeader {
+	width: 938px;
+	_width: 940px;
+	margin: 95px auto 5px;
+	text-align: left;
+	position: relative;
+	margin-top: 10px;
+	/*z-index:5000;*/
+}
+
+.nbaHeaderLft {
+	width: 550px;
+	float: left;
+}
+
+.nbaHeaderRt {
+	width: 380px;
+	float: left;
+	margin: 5px 0 0 0;
+}
+/*  -----------------------------------------------------------------------------
+		(2a) Header Text Area */
+#nbaExpandPod {
+	position: relative;
+	width: 1004px;
+}
+
+#nbaExpandAd {
+	margin: 0 2px 5px 0;
+	min-width: 938px;
+}
+
+#nbaBdHeadText {
+	height: 60px;
+	width: 275px;
+	*width: 300px;
+	float: left;
+	padding: 15px 15px 0 20px;
+	*padding: 15px 10px 0 10px;
+}
+
+#nbaBdHeadAd {
+	height: 60px;
+	width: 205px;
+	float: left;
+	padding: 5px 10px 0 10px;
+	*padding: 5px 5px 0 5px;
+}
+
+.nbaGLadHeader {
+	width: 200px;
+	margin: 0;
+	padding: 0;
+}
+
+#nbaBdHeadText h1 {
+	font-size: 30px;
+	font-weight: bolder;
+	color: #000000;
+	display: inline;
+	padding: 0;
+}
+
+#nbaBdHeadText h2 {
+	font-size: 22px;
+	color: #000000;
+	display: inline;
+	padding: 0;
+}
+/*  -----------------------------------------------------------------------------
+		(2b) Header Select Buttons Area */
+#nbaBdHeadButtons {
+	height: 28px;
+	width: 350px;
+	float: right;
+	padding: 27px 5px 0 0;
+}
+
+.nbaSelectText {
+	width: 28px;
+	height: 18px;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	padding: 7px 0 0 0;
+	font-size: 14px;
+	margin: 0 3px;
+	float: left;
+}
+
+.nbaSelectDate, .nbaSelectDate2 {
+	width: 158px;
+	height: 28px;
+	float: left;
+	cursor: pointer;
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/NBAselectDate_idle.gif')
+		no-repeat;
+}
+
+.nbaSelectDate2 {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/NBAselectDate_idle2.gif')
+		no-repeat;
+}
+
+.nbaSelectDateOn, .nbaSelectDateOn2 {
+	width: 158px;
+	height: 28px;
+	float: left;
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/NBAselectDate_drop.gif')
+		no-repeat;
+}
+
+.nbaSelectDateOn2 {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/NBAselectDate_drop2.gif')
+		no-repeat;
+}
+
+.nbaSelectTeam, .nbaSelectTeam2 {
+	width: 158px;
+	height: 28px;
+	float: left;
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/NBAselectTeam_idle.gif')
+		no-repeat;
+}
+
+.nbaSelectTeam2 {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/NBAselectTeam_idle2.gif')
+		no-repeat;
+}
+
+.nbaSelectTeamOn, .nbaSelectTeamOn2 {
+	width: 158px;
+	height: 28px;
+	float: left;
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/NBAselectTeam_drop.gif')
+		no-repeat;
+}
+
+.nbaSelectTeamOn2 {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/NBAselectTeam_drop2.gif')
+		no-repeat;
+}
+
+.nbaSelectDate2 span, .nbaSelectDateOn2 span, .nbaSelectTeam2 span,
+	.nbaSelectTeamOn2 span {
+	color: #666;
+	display: block;
+	font-size: 12px;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: 9px 0 0 15px;
+}
+/*  -----------------------------------------------------------------------------
+		(2c) Select Date */
+#nbaCalendarBox {
+	height: 202px;
+	position: absolute;
+	width: 924px;
+	top: 60px;
+	left: 7px;
+	z-index: 5;
+	display: none;
+}
+
+.nbaCalTop {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/CalBarTop.gif')
+		no-repeat;
+	height: 12px;
+}
+
+.nbaCalBox {
+	background-color: #FFFFFF;
+	border-left: 1px solid #cfcfcf;
+	border-right: 1px solid #cfcfcf;
+	height: 195px;
+	*height: 200px;
+	_margin-top: -2px;
+	padding: 10px 6px 0;
+	_padding: 5px 3px 0;
+}
+
+.nbaCalBtm {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/CalBarBtm.gif')
+		no-repeat;
+	height: 5px;
+}
+/*  -----------------------------------------------------------------------------
+			(2c1) Month */
+#nbaCalMonthList {
+	paddimg: 0;
+	margin: 0;
+	float: left;
+}
+
+.nbaCalMonth {
+	width: 140px;
+	margin: 0 2px;
+	float: left;
+}
+
+.nbaCalMonthHdr {
+	background-color: #f5f5f5;
+}
+
+.nbaCalMonthRed {
+	border: 1px solid #cfcfcf;
+}
+
+.nbaCalMonthText {
+	padding: 4px 0;
+	margin-bottom: 3px;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	border-bottom: 1px solid #cfcfcf;
+}
+
+.nbaCalCellLt {
+	background-color: #f2f2f2;
+}
+
+.nbaCalCell {
+	font-size: 10px;
+	color: #9b9b9b;
+	text-align: center;
+}
+
+.nbaCalCellDk {
+	background-color: #e3e3e3;
+	font-size: 10px;
+	color: #626262;
+	text-align: center;
+	border: 1px solid #e3e3e3;
+	width: 11px;
+}
+
+.nbaCalDayCell a {
+	font-size: 10px;
+	font-weight: bold;
+	color: #177BC7 !important;
+	text-align: center;
+	text-decoration: none;
+}
+
+.nbaCalCellRed {
+	background-color: #ffffff;
+	font-size: 10px;
+	color: #000000;
+	text-align: center;
+}
+
+.nbaCalCellRed a {
+	font-size: 10px;
+	color: #177BC7;
+	text-align: center;
+	text-decoration: none;
+}
+
+.nbaCalCellWht {
+	background-color: #177BC7;
+	font-size: 10px;
+	text-align: center;
+	border: 1px solid #177BC7;
+}
+
+.nbaCalCellWht a {
+	color: #fff !important;
+	text-align: center;
+	text-decoration: none;
+}
+/*  -----------------------------------------------------------------------------
+			(2c2) Scroll */
+a.nbaCalScroll div {
+	width: 20px;
+	height: 43px;
+	float: left;
+}
+
+a.nbaCalLeft.nbaCalScrollEnabled div {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/flStrLft.jpg')
+		no-repeat;
+}
+
+a.nbaCalRight.nbaCalScrollEnabled div {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/flStrRt.jpg')
+		no-repeat;
+}
+
+a.nbaCalLeft div {
+	margin: 70px 2px 0 0;
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/flStrLft_out.jpg')
+		no-repeat;
+}
+
+a.nbaCalRight div {
+	margin: 70px 0 0 2px;
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/flStrRt_out.jpg')
+		no-repeat;
+}
+
+/*  -----------------------------------------------------------------------------
+			(2c3) Close */
+.nbaCalFooter {
+	width: 870px;
+	height: 20px;
+	margin: 7px 20px 0 20px;
+	*margin: 0 20px 0 20px;
+}
+
+.nbaCalToday {
+	font-weight: bold;
+	color: #177bc7;
+	text-decoration: none;
+	text-align: left;
+	float: left;
+}
+
+a.closeCaltext {
+	text-decoration: none;
+}
+
+.closeCal {
+	width: 100px;
+	height: 16px;
+	padding-top: 3;
+	font-size: 10px;
+	font-weight: bold;
+	float: right;
+	color: #626262;
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/closeBtn.gif')
+		no-repeat;
+}
+/*  -----------------------------------------------------------------------------
+		(2d) Select Team */
+#nbaTeamBox {
+	height: 202px;
+	position: absolute;
+	width: 924px;
+	top: 60px;
+	left: 7px;
+	z-index: 5;
+	display: none;
+	font-size: 11px;
+}
+
+#nbaTeamBox a {
+	font-size: 11px;
+}
+
+#nbaTeamBox a:hover, .closeCal:hover {
+	text-decoration: underline;
+}
+
+.nbaTeamTop {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/TeamBarTop.gif')
+		no-repeat;
+	height: 12px;
+}
+
+.nbaTeamBox {
+	background-color: #FFFFFF;
+	border-left: 1px solid #cfcfcf;
+	border-right: 1px solid #cfcfcf;
+	height: 220px;
+	*height: 205px;
+	_margin-top: -2px;
+	padding: 4px 16px 0;
+	_padding: 2px 6px 0;
+}
+
+#nbaTeamText table td {
+	padding: 4px 0;
+	border: 0;
+}
+
+#nbaTeamText table td a {
+	color: #818181;
+	text-decoration: none;
+	font-weight: bold;
+}
+/*  -----------------------------------------------------------------------------
+			(2d1) East Conf */
+.nbaECbox {
+	width: 435px;
+	float: left;
+}
+
+.nbaECHeader {
+	width: 435px;
+	padding-bottom: 5px;
+	color: #4d94d2;
+	font-weight: bold;
+	text-transform: uppercase;
+	border-bottom: 1px solid #f2f2f2;
+	margin-bottom: 10px;
+}
+
+#nbaTeamText td.nbaECHeaderTable {
+	color: #4d94d2;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+/*  -----------------------------------------------------------------------------
+			(2d2) West Conf */
+.nbaWCbox {
+	width: 435px;
+	float: left;
+	margin: 0 0 0 10px;
+}
+
+.nbaWCHeader {
+	width: 435px;
+	padding-bottom: 5px;
+	color: #f12830;
+	font-weight: bold;
+	text-transform: uppercase;
+	border-bottom: 1px solid #f2f2f2;
+	margin-bottom: 10px;
+}
+
+#nbaTeamText td.nbaWCHeaderTable {
+	color: #f12830;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+/*  -----------------------------------------------------------------------------
+		(2e) Today Link */
+#nbaButtonLink {
+	height: 18px;
+	width: 280px;
+	float: left;
+	padding: 0;
+	font-size: 11px;
+}
+
+#nbaButtonLink a {
+	font-weight: bold;
+	color: #115991;
+	text-decoration: none;
+}
+/*  -----------------------------------------------------------------------------
+		(2f) Date Strip (Film strip) */
+.nbaFlStrHeadBox {
+	width: 80px;
+	float: left;
+	margin: 0 2px;
+	_margin: 0 1px 0 2px;
+	text-decoration: none;
+	height: 46px;
+}
+
+#nbaFlStripeBox {
+	height: 65px;
+	width: 927px;
+	text-decoration: none;
+}
+/*  -----------------------------------------------------------------------------
+			(2f1) Strip Top Text */
+.nbaFlStrTopText {
+	border-left: 1px solid #cccccc;
+	width: 115px;
+	color: #333333;
+	float: left;
+	font-weight: bold;
+}
+
+.nbaFlStrTop {
+	width: 112px;
+	padding: 0 5px;
+	float: left;
+}
+
+#flStrMon {
+	display: inline;
+	text-decoration: none;
+}
+/*  -----------------------------------------------------------------------------
+			(2f2) Strip Module */
+.nbaFsBox {
+	width: 610px;
+	_width: 880px;
+	float: left;
+}
+
+.nbaFsBox a {
+	text-decoration: none;
+}
+
+.fsDate {
+	font-size: 11px;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	color: #666666;
+	margin: 4px auto;
+	padding-top: 2px;
+}
+
+.fsGame {
+	font-size: 10px;
+	text-transform: uppercase;
+	text-align: center;
+	margin: 4px auto;
+	/*padding-top: 4px;*/
+	color: #626262;
+}
+/*Images for all states and rollovers*/
+.ltMod {
+	width: 80px;
+	height: 44px;
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/FlmStrImg.jpg')
+		no-repeat;
+	float: left;
+}
+
+.ltModAr {
+	width: 122px;
+	height: 52px;
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/FlmStrImg.jpg')
+		no-repeat;
+	float: left;
+	background-position: -123px 0;
+}
+
+.ltModTodHl {
+	width: 122px;
+	height: 43px;
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/FlmStrImg.jpg')
+		no-repeat;
+	float: left;
+	background-position: 0px -53px;
+}
+
+.ltModArTodHl {
+	width: 122px;
+	height: 52px;
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/FlmStrImg.jpg')
+		no-repeat;
+	float: left;
+	background-position: -123px -53px;
+}
+
+.ltMod.Highlight {
+	width: 122px;
+	height: 43px;
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/FlmStrImg.jpg')
+		no-repeat;
+	float: left;
+	background-position: -246px 0px;
+}
+
+.ltModAr.Highlight {
+	width: 122px;
+	height: 52px;
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/FlmStrImg.jpg')
+		no-repeat;
+	float: left;
+	background-position: -246px -53px;
+}
+
+.dkMod {
+	width: 122px;
+	height: 43px;
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/FlmStrImg.jpg')
+		no-repeat;
+	float: left;
+	background-position: 0px -106px;
+}
+
+.dkModAr {
+	width: 122px;
+	height: 52px;
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/FlmStrImg.jpg')
+		no-repeat;
+	float: left;
+	background-position: -123px -106px;
+}
+
+.dkModTodHl {
+	width: 122px;
+	height: 43px;
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/FlmStrImg.jpg')
+		no-repeat;
+	float: left;
+	background-position: 0px -159px;
+}
+
+.dkModArTodHl {
+	width: 122px;
+	height: 52px;
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/FlmStrImg.jpg')
+		no-repeat;
+	float: left;
+	background-position: -123px -159px;
+}
+
+.dkMod.Highlight {
+	width: 122px;
+	height: 43px;
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/FlmStrImg.jpg')
+		no-repeat;
+	float: left;
+	background-position: -246px -106px;
+}
+
+.dkModAr.Highlight {
+	width: 122px;
+	height: 52px;
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/FlmStrImg.jpg')
+		no-repeat;
+	float: left;
+	background-position: -246px -159px;
+}
+/*  -----------------------------------------------------------------------------
+			(2f3) Scroll */
+a.nbaFsScroll div {
+	width: 20px;
+	height: 43px;
+	margin: 15px 0 0 0;
+	float: left;
+}
+
+a.nbaFsLeft div {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/flStrLft_out.jpg')
+		no-repeat;
+}
+
+a.nbaFsRight div {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/flStrRt_out.jpg')
+		no-repeat;
+}
+
+a.nbaFsLeft.nbaFsScrollEnabledLft div {
+	margin-right: 2px;
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/flStrLft.jpg')
+		no-repeat;
+}
+
+a.nbaFsRight.nbaFsScrollEnabledRt div {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/flStrRt.jpg')
+		no-repeat;
+}
+
+/*  -----------------------------------------------------------------------------
+			(2f4) Larger Date */
+/*ALERT! -- Use the first instance of "nbaLgDate" class when the book travel sponsor is present on the page, otherwise use the second instance
+				.nbaLgDate {     
+					font-size:26px;
+					text-transform:uppercase;
+					color:#000000;
+					font-weight:bold;
+					text-align:center;
+					margin:5px 0px 10px 0px;
+					width:680px;
+					}*/
+.nbaLgDate {
+	font-size: 26px;
+	text-transform: uppercase;
+	color: #000000;
+	font-weight: bold;
+	text-align: center;
+	margin: 5px 0px 10px 0px;
+	width: 920px;
+}
+
+div.ticketsLink  a.nbaTickets {
+	background:
+		url(http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/nbatickets.jpg)
+		no-repeat;
+	display: block;
+	text-indent: -9999px;
+	width: 162px;
+	height: 20px;
+	margin-left: 20px;
+	margin-top: 6px;
+	position: absolute;
+}
+/*  -----------------------------------------------------------------------------
+					ALERT! -- DO NOT change the sponsor watermark image name. When sponsorship is active make a copy of the current "GL_sponsor.gif" and rename your image file to "GL_sponsor.gif"  */
+#nbaSSOuter {
+	width: 1000px;
+	height: 500px;
+	background:
+		url(http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/GL_sponsor.gif)
+		no-repeat;
+	background-color: #FFFFFF;
+	margin: 0 auto 5px auto;
+	_margin: 0 10px 5px;
+	text-align: left;
+	position: relative;
+	overflow: visible;
+}
+
+html>body #nbaSSOuter {
+	*height: auto;
+}
+
+.nbaAmp {
+	display: none;
+}
+/*  --------------------------------------------------------------------------------------------------------------- */
+#nbaNoGames {
+	position: relative;
+	height: 84px;
+	margin: 10px auto;
+	text-align: center;
+}
+
+.nbaNoGamesText {
+	font-size: 24px;
+	color: #cc0000;
+	text-align: center;
+}
+/*  -----------------------------------------------------------------------------*/
+
+/* ------------------------------------------------------------------------------
+	GAME STATE MODULES
+	This section contains everything specific to the NBA Gameline Game state modules. Do not put any non-Module specific information in this area. Please pay close attention to the comments throughout this document!	There are many css dependencies involved in this section.*/
+
+/*	----------------------------------------------------------------------------
+
+	GAME STATE MODULES POSSIBILITIES - PREVIEW, LIVE, RECAP, LIVEOT, RECAPOT 
+
+ */
+/* ----------------------------------------------------------------------------
+	Table Of Contents
+	
+*/
+/*  -----------------------------------------------------------------------------
+	(3) COMMON STYLES    */
+.nbaOuterBox {
+	width: 950px;
+	float: left;
+}
+
+.nbaModOuterBox {
+	width: 1000px;
+	border-top: 1px solid #999999;
+	margin: 0;
+	float: left;
+	background-color: #FFFFFF;
+	padding: 12px 0 0 0;
+	_padding: 12px 0 -6px 0;
+}
+
+.nbaBtmClose {
+	/*---- Default style for all modules that appear in the closed state -----*/
+	position: relative;
+	height: 84px;
+	display: none;
+}
+
+.nbaBtmOpen {
+	/*---- Style swaps with 'nbaBtmClose' to show lower half of module for all states -----*/
+	position: relative;
+	height: 84px;
+}
+
+.nbaModBarPlusBut {
+	/*---- Default style for expand button on all modules that appear in the closed state -----*/
+	width: 19px;
+	height: 19px;
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/plusButton.jpg')
+		no-repeat;
+}
+
+.nbaModBarPlusBut:hover {
+	/*---- Hover state for default style on the expand button in the closed state -----*/
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/video/nba.vid.plus.hover.gif')
+		no-repeat;
+}
+
+.MinusBut {
+	/*---- Style added to 'nbaModBarPlusBut' style for expanded button in the open state -----*/
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/minusButton.jpg')
+		no-repeat;
+}
+
+.MinusBut:hover {
+	/*---- Hover state for expanded button in the open state -----*/
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/video/nba.vid.minus.hover.gif')
+		no-repeat;
+}
+
+.ChromeNav {
+	display: none;
+	height: 0px !important;
+}
+
+.nbaGL2kToday {
+	width: 172px;
+	height: 26px;
+	float: right;
+	margin: 10px 0;
+}
+/* ALERT! -- Use the first instance of "nbaGLTravel" class when the book travel sponsor is present on the page, otherwise use the second instance, please make sure you switch the "nbaLgDate" class appropriately*/
+.nbaGLTravel {
+	display: visible;
+	float: left;
+	position: relative;
+	left: 30px;
+}
+/*.nbaGLTravel{
+			display:none;
+			}*/
+.noHighlight {
+	display: none;
+}
+/*  -----------------------------------------------------------------------------
+		(3a) COMMON STYLES    */
+/*---- Styles for teamm logos will appear on Live, Recap, LiveOT, RecapOT modules -----*/
+.glATL {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/ATL.gif')
+		no-repeat;
+}
+
+.glBKN {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/BKN.gif')
+		no-repeat;
+}
+
+.glBOS {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/BOS.gif')
+		no-repeat;
+}
+
+.glCHI {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/CHI.gif')
+		no-repeat;
+}
+
+.glCHA {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/CHL.gif')
+		no-repeat;
+}
+
+.glCLE {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/CLE.gif')
+		no-repeat;
+}
+
+.glDAL {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/DAL.gif')
+		no-repeat;
+}
+
+.glDEN {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/DEN.gif')
+		no-repeat;
+}
+
+.glDET {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/DET.gif')
+		no-repeat;
+}
+
+.glGSW {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/GSW.gif')
+		no-repeat;
+}
+
+.glHOU {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/HOU.gif')
+		no-repeat;
+}
+
+.glIND {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/IND.gif')
+		no-repeat;
+}
+
+.glLAL {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/LAL.gif')
+		no-repeat;
+}
+
+.glLAC {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/LOS.gif')
+		no-repeat;
+}
+
+.glMEM {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/MEM.gif')
+		no-repeat;
+}
+
+.glMIA {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/MIA.gif')
+		no-repeat;
+}
+
+.glMIL {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/MIL.gif')
+		no-repeat;
+}
+
+.glMIN {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/MIN.gif')
+		no-repeat;
+}
+
+.glNJN {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/NJY.gif')
+		no-repeat;
+}
+
+.glNOH {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/NOL.gif')
+		no-repeat;
+}
+
+.glNOP {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/NOP.gif')
+		no-repeat;
+}
+
+.glNYK {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/NYK.gif')
+		no-repeat;
+}
+
+.glOKC {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/OKC.gif')
+		no-repeat;
+}
+
+.glORL {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/ORL.gif')
+		no-repeat;
+}
+
+.glPHI {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/PHI.gif')
+		no-repeat;
+}
+
+.glPHX {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/PHO.gif')
+		no-repeat;
+}
+
+.glPOR {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/POR.gif')
+		no-repeat;
+}
+
+.glSAC {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/SAC.gif')
+		no-repeat;
+}
+
+.glSAS {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/SAN.gif')
+		no-repeat;
+}
+
+.glTOR {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/TOR.gif')
+		no-repeat;
+}
+
+.glUTA {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/UTH.gif')
+		no-repeat;
+}
+
+.glWAS {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/WAS.gif')
+		no-repeat;
+}
+
+.glEST {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameinfo/teamlogos/small/EST.gif')
+		no-repeat;
+}
+
+.glWST {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameinfo/teamlogos/small/WST.gif')
+		no-repeat;
+}
+
+.glRKE {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameinfo/teamlogos/small/RKE.gif')
+		no-repeat;
+}
+
+.glSPH {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameinfo/teamlogos/small/SPH.gif')
+		no-repeat;
+}
+
+/*-----Style International Logos -----------*/
+.glALB {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/ALB.gif')
+		no-repeat;
+}
+
+.glRMA {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/RMA.gif')
+		no-repeat;
+}
+
+.glMON {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/MON.gif')
+		no-repeat;
+}
+
+.glFEN {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/FEN.gif')
+		no-repeat;
+}
+
+.glMLN {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/MLN.gif')
+		no-repeat;
+}
+
+.glMAC {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/MAC.gif')
+		no-repeat;
+}
+
+.glLAB {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameinfo/teamlogos/small/CLA.gif')
+		no-repeat;
+}
+
+.glBAR {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/BAR.gif')
+		no-repeat;
+}
+
+.glMOS {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameinfo/teamlogos/small/MOS.gif')
+		no-repeat;
+}
+
+/*-----D-League Logo -----------*/
+.glDLS {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/DLS.gif')
+		no-repeat;
+}
+
+/*---- Style for Network logos may appear on Preview anf Live modules -----*/
+.nbaABC {
+	background:
+		url(http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/ABC_48X30.gif)
+		no-repeat;
+}
+
+.nbaNBATV {
+	background:
+		url(http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/NBATV_48X30.gif)
+		no-repeat;
+}
+
+.nbaTNT {
+	background:
+		url(http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/TNT_48X30.gif)
+		no-repeat;
+}
+
+.nbaSUNTV {
+	background:
+		url(http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/SUNTV_48X30.gif)
+		no-repeat;
+}
+
+.nbaESPN {
+	background:
+		url(http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/ESPN_48X30.gif)
+		no-repeat;
+}
+
+.nbaESPNNBA {
+	background:
+		url(http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/ESPN_NBA_48X30.gif)
+		no-repeat;
+}
+
+.nbaESPNHD {
+	background:
+		url(http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/ESPNHD_48X30.gif)
+		no-repeat;
+}
+
+.nbaESPN2 {
+	background:
+		url(http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/ESPN2_48X30.gif)
+		no-repeat;
+}
+
+.nbaLPBB {
+	background:
+		url(http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/LPBB_48X30.gif)
+		no-repeat;
+}
+
+.nbaSL_LPBB {
+	background:
+		url(http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/SL_LPBB_48X30.gif)
+		no-repeat;
+}
+
+.nbaRaptorsTV {
+	background:
+		url(http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/RaptorsTV_48X30.gif)
+		no-repeat;
+}
+
+/*  -----------------------------------------------------------------------------
+		(3b) SEASON SERIES TEXT   */
+.nbaSeaSeriesDate {
+	color: #333333;
+}
+
+.nbaSeaSeriesWin {
+	color: #fa191d;
+}
+
+.nbaSeaSeriesLose {
+	color: #626262;
+}
+
+.nbaSeaSeriesText {
+	color: #626262;
+}
+
+.nbaSeaSeriesSmall {
+	margin: -2px 0 0 0;
+}
+
+/*  -----------------------------------------------------------------------------
+	(4) PREVIEW MODULE (non of the styles in this section are shared by any other modules)  */
+.Pre .nbaModOuterBarBckSmPre {
+	position: absolute;
+	left: 950px;
+	width: 25px;
+	height: 55px;
+	_height: 105px;
+	padding: 40px 0 0 5px;
+	_padding: 40px 0 0 3px;
+	float: left;
+	background: #F2F2F2;
+	background-position: 0px 20px;
+	margin: 0 0 10px;
+	_margin: 0;
+}
+
+.Pre .BarLg {
+	height: 140px;
+	_height: 190px;
+}
+
+.Pre .nbaPreMnTextToday {
+	margin: 0 0 0 10px;
+	width: 300px;
+	height: 20px;
+	font-size: 10px;
+	font-weight: bold;
+	color: #707070;
+	float: left;
+}
+/*  -----------------------------------------------------------------------------
+		(4a) PREVIEW TOP SECTION    */
+.Pre .nbaNoBorder {
+	/*---- Default style for Preview modules that appear in the closed state -----*/
+	position: relative;
+	height: 105px;
+	border-bottom: none;
+}
+
+.Pre .Dotted {
+	/*---- Style added to 'nbaNoBorder' style for Preview modules that appear in the open state -----*/
+	border-bottom: 1px dashed #cccccc;
+}
+
+/*---- Preview modules far left buttons  -----*/
+.Pre .nbaPreMnButtDiv {
+	float: left;
+	width: 113px;
+	height: 84px;
+}
+
+.Pre .nbaPreMnPreview, .Pre .nbaPreMnPreview2 {
+	height: 20px;
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/Preview_but.jpg')
+		no-repeat;
+	width: 87px;
+	margin: 25px 15px 0;
+}
+
+.Pre .nbaPreMnPreview2 {
+	float: left;
+	text-align: center;
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/Preview_but2.jpg')
+		no-repeat;
+}
+
+.Pre .nbaPreMnTickets, .Pre .nbaPreMnTickets2 {
+	height: 20px;
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/BuyTic_but_blue.jpg')
+		no-repeat;
+	width: 87px;
+	margin: 5px 15px 0;
+	float: left;
+}
+
+.Pre .nbaPreMnTickets2 {
+	float: left;
+	text-align: center;
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/BuyTic_but_blue2.jpg')
+		no-repeat;
+}
+
+.Pre .nbaPreMnTickets2 span, .Pre .nbaPreMnPreview2 span {
+	color: #fff;
+	display: block;
+	font-size: 11px;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: 4px 0 0;
+}
+
+.Pre a .nbaPreMnTickets2 span, .Pre a .nbaPreMnPreview2 span {
+	text-decoration: none;
+}
+
+.Pre .nbaPreInfo {
+	width: 754px;
+	_width: 748px;
+	float: left;
+}
+
+/*---- Preview module Top standings row  -----*/
+.Pre .nbaPreSmText {
+	width: 235px;
+	margin: 5px 0 2px 260px;
+}
+
+.Pre .nbaPreSmText.nbaPreSeason {
+	margin: 5px 0 0 20px;
+	width: 500px;
+}
+
+.nbaPreSeasonPod {
+	background:
+		url(http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/preseason.back.gif)
+		no-repeat center top;
+	color: #000;
+	font-weight: bold;
+	float: left;
+	height: 15px;
+	line-height: 17px;
+	margin-right: 155px;
+	position: relative;
+	text-align: center;
+	width: 84px;
+}
+
+.Pre .nbaPreSmText table {
+	font-size: 10px;
+	font-family: 'Open Sans', sans-serif;
+	/*font-family: Verdana, Arial, Helvetica, sans-serif;*/
+	text-transform: uppercase;
+	text-align: center;
+	color: #666666;
+}
+
+.Pre .nbaPreSmText table th {
+	width: 85px;
+	font-weight: normal;
+	text-align: left;
+}
+
+.Pre .nbaPreSmText table td {
+	padding: 1px;
+}
+
+.Pre .nbaPreSmText.nbaPreSeason table {
+	font-size: 10px;
+	font-family: 'Open Sans', sans-serif;
+	/*font-family: Verdana, Arial, Helvetica, sans-serif;*/
+	float: left;
+	text-transform: uppercase;
+	text-align: center;
+	color: #666;
+	width: 235px;
+}
+
+.Pre .nbaPreSmText.nbaPreSeason table th {
+	width: 85px;
+	font-weight: normal;
+	text-align: left;
+}
+
+.Pre .nbaPreSmText.nbaPreSeason table td {
+	padding: 1px;
+}
+
+.Pre .nbaPreMnScore {
+	float: left;
+	width: 495px;
+	_width: 505px;
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/PreBox.gif')
+		no-repeat;
+	padding: 0 5px;
+	margin: 0 3px 0 0;
+	height: 61px;
+}
+
+/*---- Styles for Preview modules time and network logo -----*/
+.Pre .nbaPreMnStatus {
+	float: left;
+	width: 150px;
+	height: 55px;
+	margin: 0;
+}
+
+.Pre .nbaPreStatTx {
+	float: left;
+	font-size: 20px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	color: #000000;
+	margin: 20px 2px 0 2px;
+}
+
+.Pre .nbaPreStatTxSm {
+	font-size: 11px;
+	float: left;
+	width: 35px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #000000;
+	margin: 29px 0 0 0;
+	_margin: 27px 0 0 0;
+}
+
+.Pre .nbaPreNetwkLogo {
+	/*---- Network styles (above) added to display appropiate logo -----*/
+	float: right;
+	text-align: center;
+	width: 48px;
+	height: 30px;
+	margin: 15px 7px 0 1px;
+	*margin: 15px 10px 0 0;
+}
+
+.Pre .nbaPreTeam {
+	float: left;
+	width: 40px;
+	margin: 3px 0 0 5px;
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.Pre .nbaPreNetwkLogoTm {
+	float: right;
+	text-align: center;
+	width: 48px;
+	height: 30px;
+	margin: 10px 10px 0 5px;
+	*margin: 10px 12px 0 3px;
+}
+
+.Pre .nbaPreStatTeamTx {
+	float: left;
+	font-size: 18px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	color: #000000;
+	width: 80px;
+	margin: 15px 3px 0 3px;
+}
+
+.Pre .nbaPreStatTxSmTm {
+	font-size: 12px;
+	float: left;
+	width: 85px;
+	text-transform: uppercase;
+	color: #626262;
+	text-align: center;
+}
+/*---- Styles for Preview modules team name and logo -----*/
+.Pre .nbaPreMnTeamInfo {
+	float: left;
+	width: 90px;
+	height: 55px;
+	margin: 5px 7px 0 0;
+}
+
+.Pre .nbaPreMnStatusTeamAw {
+	float: left;
+	width: 90px;
+	height: 22px;
+}
+
+.Pre .nbaPreMnStatusTeamHm { /*---- Home Team -----*/
+	float: left;
+	width: 90px;
+	height: 22px;
+	margin: 7px 0 0 0;
+}
+
+/*---- Styles for Preview modules team standings and stats -----*/
+.Pre .nbaPreMnTmStdg {
+	float: left;
+	width: 235px;
+	height: 55px;
+	padding: 3px 0;
+	margin: 0 5px 0 7px;
+	*margin: 0 2px 0 6px;
+}
+
+.Pre .nbaPreMnTmStdg table td.spacer, .Pre .nbaPreMnTmStdg table th.spacer
+	{
+	padding: 3px 0 0 3px;
+}
+
+.Pre .nbaPreMnTmStdg table th {
+	text-align: left;
+	width: 85px;
+	height: 25px;
+	font-size: 11px;
+	padding: 0px 2px;
+	vertical-align: middle;
+	text-transform: uppercase;
+}
+
+.Pre .nbaPreMnTmStdg table td {
+	text-align: center;
+	height: 25px;
+	font-size: 9px;
+	color: #626262;
+	padding: 0px 2px;
+	vertical-align: middle;
+	text-transform: capitalize;
+}
+
+.Pre .nbaPreMnTmStdg table td.lastScore {
+	padding-right: 5px;
+}
+/*---- Styles for Preview modules Season Series -----*/
+.Pre .nbaPreSSeries {
+	float: left;
+	width: 245px;
+	*width: 240px;
+	height: 65px;
+	margin: 0;
+}
+
+.Pre .nbaPreSSeriesHdr {
+	color: #505050;
+	padding: 3px 0;
+	font-weight: bold;
+}
+
+.Pre .nbaPreSSeries ul {
+	margin: 0;
+	padding: 0;
+}
+
+.Pre .nbaPreSSeries ul li {
+	padding: 5px 5px 5px 0;
+	*padding: 5px 5px 5px 0;
+	list-style: none;
+	display: inline-block;
+	*display: inline;
+	font-weight: bold;
+	font-size: 0.85em;
+	border-bottom: 1px dashed #cccccc;
+	*border-bottom: none;
+}
+
+.Pre .nbaPreSSeries ul li.last {
+	border-bottom: none;
+}
+
+/*---- Styles for Preview modules Links (small text) -----*/
+.Pre .nbaPreMnText {
+	margin: 0 0 5px 0;
+	width: 600px;
+	font-size: 10px;
+	font-weight: bold;
+	color: #707070;
+	float: left;
+}
+
+.Pre .nbaPreMnText a {
+	color: #177bc7;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.Pre .nbaPreMnText a:hover {
+	color: #177bc7;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+/*  -----------------------------------------------------------------------------
+		(4b) PREVIEW BOTTOM SECTION    */
+
+/*---- Preview modules Facebook and Twitter Box  -----*/
+.Pre .nbaPreMnSocialDiv {
+	float: left;
+	width: 35px;
+	margin: 10px 7px 0 0;
+	height: 55px;
+}
+
+/*---- Preview modules Season Leaders table  -----*/
+.Pre .nbaPreGmStats {
+	float: left;
+	width: 550px;
+	height: 61px;
+	margin: 5px 5px 0 0;
+	*margin: 5px 0 0 0;
+}
+
+.Pre .nbaPreGmStatRw {
+	padding: 4px 0;
+}
+
+.Pre .nbaPreGmStatRwDk {
+	padding: 4px 0;
+	background-color: #f2f2f2;
+}
+
+.Pre .nbaPreGmStatsHd {
+	text-align: left;
+	margin: 0;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #6f6f6f;
+}
+
+.Pre .nbaPreGmStats table th {
+	text-align: left;
+	padding: 0 4px;
+	width: 30px;
+	font-size: 11px;
+	text-transform: uppercase;
+	color: #6f6f6f;
+}
+
+.Pre .nbaPreGmStats table td {
+	font-size: 11px;
+	width: 117px;
+	padding: 0 4px;
+	border-right: 1px solid #cccccc;
+	color: #6f6f6f;
+}
+
+/*  -----------------------------------------------------------------------------
+		(4c) PREVIEW - DO NOT DISPLAY    */
+
+/* Below are this styles that DO NOT DISPLAY when any given module container class is set to "Pre" */
+.Pre .nbaFnlMnRecapDiv, .Pre .nbaFnlMnRecap, .Pre .nbaFnlStatTx, .Pre .nbaFnlStatTxSm,
+	.Pre .nbaFnlBtmInfo, .Pre .nbaFnlMnSocialDiv, .Pre .nbaFnlGmStats, .Pre .nbaFnlGmStats table th,
+	.Pre .nbaFnlGmStats table th.drkRow, .Pre .nbaFnlGmStats table td, .Pre .nbaFnlGmStats table td.drkRow,
+	.Pre .nbaFnlGmStats table td.gryText, .Pre .nbaLiveMnButtDiv, .Pre .nbaLiveMnGame,
+	.Pre .nbaLiveMnButtTxt, .Pre .nbaLiveMnButtTxt a, .Pre .nbaLiveMnButtTxt a:hover,
+	.Pre .nbaLiveMnTm, .Pre .nbaLiveMnTmLft, .Pre .nbaLiveMnTmRt, .Pre .nbaLiveNetwkLogo,
+	.Pre .nbaLiveStatTx, .Pre .nbaLiveStatTxSm, .Pre .nbaMnHltHdr, .Pre .nbaVideoLeft,
+	.Pre .nbaVideoWrapper, .Pre .nbaVideoWrapper img, .Pre .nbaVideoOverlay,
+	.Pre .nbaLiveMnSocialDiv, .Pre .nbaLiveMnSocialDiv, .Pre .nbaLiveBtmInfo .nbaSSeries,
+	.Pre .nbaLiveBtmInfo, .Pre .nbaLiveGmStats, .Pre .nbaLiveGmStats table th,
+	.Pre .nbaLiveGmStats table th.drkRow, .Pre .nbaLiveGmStats table td,
+	.Pre .nbaLiveGmStats table td.drkRow, .Pre .nbaLiveGmStats table td.gryText,
+	.Pre .nbaMnQuScores, .Pre .nbaModTopInfo, .Pre .nbaMnStatsOT, .Pre .nbaQtrRedOT,
+	.Pre .nbaMnQuBoxOT {
+	display: none;
+}
+
+/*  -----------------------------------------------------------------------------
+	(5) LIVE AND LIVE OT MODULE    (for module structure styles go to the 'Shared Module Styles') */
+
+/*  -----------------------------------------------------------------------------
+		(5a) TOP SECTION   (non of the styles in this section are shared by any other modules) */
+/*---- Live modules far left button container  -----*/
+.Live .nbaLiveMnButtDiv, .LiveOT .nbaLiveMnButtDiv {
+	float: left;
+	width: 118px;
+	height: 84px;
+}
+/*---- Live modules far left button  -----*/
+.Live .nbaLiveMnGame, .LiveOT .nbaLiveMnGame {
+	height: 20px;
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/nbaLive_but.jpg')
+		no-repeat;
+	width: 87px;
+	margin: 7px 15px 0;
+}
+
+.Live .nbaLiveMnGame2, .LiveOT .nbaLiveMnGame2 {
+	height: 20px;
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/nbaLive_but2.jpg')
+		no-repeat;
+	width: 87px;
+	margin: 7px 15px 0;
+	float: left;
+}
+
+.Live .nbaLiveMnGame2 span, .LiveOT .nbaLiveMnGame2 span {
+	color: #FFFFFF;
+	display: block;
+	font-size: 11px;
+	font-weight: bold;
+	margin: 4px 0 0;
+	text-transform: uppercase;
+}
+
+.Live .nbaLiveMnGame2, .LiveOT .nbaLiveMnGame2 {
+	height: 20px;
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/nbaLive_but2.jpg')
+		no-repeat;
+	width: 87px;
+	margin: 7px 15px 0;
+	float: left;
+}
+
+.Live .nbaLiveMnGame2 span, .LiveOT .nbaLiveMnGame2 span {
+	color: #FFFFFF;
+	display: block;
+	font-size: 11px;
+	font-weight: bold;
+	text-align: center;
+	margin: 4px 0 0;
+	text-transform: uppercase;
+}
+/*---- Live modules 'Media Notes'  -----*/
+.Live .nbaLiveMnButtTxt, .LiveOT .nbaLiveMnButtTxt {
+	font-size: 11px;
+	font-weight: bold;
+	text-align: center;
+	color: #666666;
+	width: 87px;
+	margin: 3px 15px;
+}
+
+.Live .nbaLiveMnButtTxt a, .LiveOT .nbaLiveMnButtTxt a {
+	color: #666666;
+	text-decoration: none;
+}
+
+.Live .nbaLiveMnButtTxt a:hover, .LiveOT .nbaLiveMnButtTxt a:hover {
+	color: #666666;
+	text-decoration: underline;
+}
+/*---- Live modules far left team buttons  -----*/
+.Live .nbaLiveMnTm, .LiveOT .nbaLiveMnTm {
+	height: 20px;
+	width: 87px;
+	margin: 5px 15px 0;
+}
+
+.Live .nbaLiveMnTmLft, .LiveOT .nbaLiveMnTmLft {
+	width: 28px;
+	height: 18px;
+	float: left;
+	margin: 0 2px 0 0;
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/nbaLive_TmLft_but.jpg')
+		no-repeat;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 2px 7px 0;
+	font-size: 11px;
+	font-weight: bold;
+	color: #666666;
+}
+
+.Live .nbaLiveMnTmRt, .LiveOT .nbaLiveMnTmRt {
+	width: 28px;
+	height: 18px;
+	float: right;
+	margin: 0;
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/nbaLive_TmRt_but.jpg')
+		no-repeat;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 2px 7px 0;
+	font-size: 11px;
+	font-weight: bold;
+	color: #666666;
+}
+/*---- Live modules 'Live' and Network  -----*/
+.Live .nbaLiveNetwkLogo, .LiveOT .nbaLiveNetwkLogo {
+	float: left;
+	text-align: center;
+	width: 48px;
+	height: 30px;
+	margin: 0;
+}
+
+.Live .nbaLiveStatTx, .LiveOT .nbaLiveStatTx {
+	font-size: 22px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	float: left;
+	color: #cc0000;
+	width: 50px;
+	margin: 2px auto 0 auto;
+}
+
+.Live .nbaLiveStatTxSm, .LiveOT .nbaLiveStatTxSm {
+	font-size: 14px;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: bold;
+	color: #000000;
+	margin: 0 auto;
+}
+/*  -----------------------------------------------------------------------------
+		(5b) BOTTOM SECTION   */
+
+/*---- Live modules 'Facebook' and 'Twitter'  -----*/
+.Live .nbaLiveMnSocialDiv, .LiveOT .nbaLiveMnSocialDiv {
+	float: left;
+	width: 33px;
+	margin: 15px 10px 15px 0;
+	border-left: 1px solid #cccccc;
+	border-right: 1px solid #cccccc;
+	height: 55px;
+}
+
+.Live .nbaLiveBtmInfo, .LiveOT .nbaLiveBtmInfo {
+	width: 550px;
+	*width: 545px;
+	float: left;
+	margin: 10px 0 0 0;
+	*margin: 0;
+}
+/*---- Live modules 'Season Series'  -----*/
+.Live .nbaLiveBtmInfo .nbaSSeries, .LiveOT .nbaLiveBtmInfo .nbaSSeries {
+	width: 275px;
+	_width: 270px;
+	float: left;
+}
+
+/*---- Live modules 'Game Stat'  -----*/
+.Live .nbaLiveGmStats, .LiveOT .nbaLiveGmStats {
+	float: left;
+	width: 260px;
+	height: 61px;
+	margin: 0 5px 0 0;
+}
+
+.Live .nbaLiveGmStats table th, .LiveOT .nbaLiveGmStats table th {
+	text-align: left;
+	padding: 3px;
+	font-size: 11px;
+	margin: 0;
+	width: 65px;
+	color: #505050;
+	text-align: center;
+}
+
+.Live .nbaLiveGmStats table th.drkRow, .LiveOT .nbaLiveGmStats table th.drkRow
+	{
+	color: #505050;
+	font-size: 11px;
+	background-color: #f2f2f2;
+	border-bottom: 1px solid #cccccc;
+	border-top: 1px solid #cccccc;
+}
+
+.Live .nbaLiveGmStats table td, .LiveOT .nbaLiveGmStats table td {
+	text-align: center;
+	font-size: 11px;
+	font-weight: bold;
+	padding: 3px 0;
+	color: #626262;
+}
+
+.Live .nbaLiveGmStats table td.drkRow, .LiveOT .nbaLiveGmStats table td.drkRow
+	{
+	text-align: center;
+	font-size: 11px;
+	font-weight: bold;
+	color: #505050;
+	background-color: #f2f2f2;
+	border-bottom: 1px solid #cccccc;
+	border-top: 1px solid #cccccc;
+}
+
+.Live .nbaLiveGmStats table td.gryText, .LiveOT .nbaLiveGmStats table td.gryText
+	{
+	color: #505050;
+	font-size: 11px;
+}
+
+/*  -----------------------------------------------------------------------------
+		(5c) LIVE MODULE - DO NOT DISPLAY   */
+/* Below are this styles that Do not display when any given module is set to live */
+.Live .nbaFnlMnRecapDiv, .Live .nbaFnlMnRecap, .Live .nbaFnlStatTx,
+	.Live .nbaFnlStatTxSm, .Live .nbaFnlBtmInfo, .Live .nbaFnlMnSocialDiv,
+	.Live .nbaFnlGmStats, .Live .nbaFnlGmStats table th, .Live .nbaFnlGmStats table th.drkRow,
+	.Live .nbaFnlGmStats table td, .Live .nbaFnlGmStats table td.drkRow,
+	.Live .nbaFnlGmStats table td.gryText, .Live .nbaPreMnButtDiv, .Live .nbaPreMnPreview,
+	.Live .nbaPreMnTickets, .Live .nbaPreInfo, .Live .nbaPreSmText, .Live .nbaPreSmText table,
+	.Live .nbaPreSmText table th, .Live .nbaPreSmText table td, .Live .nbaPreMnScore,
+	.Live .nbaPreMnStatus, .Live .nbaPreStatTx, .Live .nbaPreStatTxSm,
+	.Live .nbaPreNetwkLogo, .Live .nbaPreMnTeamInfo, .Live .nbaPreMnStatusTeamAw,
+	.Live .nbaPreMnStatusTeamHm, .Live .nbaPreMnTmStdg, .Live .nbaPreMnTmStdg table td.spacer,
+	.Live .nbaPreMnTmStdg table th.spacer, .Live .nbaPreMnTmStdg table th,
+	.Live .nbaPreMnTmStdg table td, .Live .nbaPreMnText, .Live .nbaPreMnText a,
+	.Live .nbaPreSSeries, .Live .nbaPreSSeriesHdr, .Live .nbaPreSSeries ul,
+	.Live .nbaPreSSeries ul li, .Live .nbaPreSSeries ul li.last, .Live .nbaPreMnSocialDiv,
+	.Live .nbaPreGmStats, .Live .nbaPreGmStatRw, .Live .nbaPreGmStatRwDk,
+	.Live .nbaPreGmStatsHd, .Live .nbaPreGmStats table th, .Live .nbaPreGmStats table td,
+	.Live .nbaMnStatsOT, .Live .nbaQtrRedOT, .Live .nbaMnQuBoxOT {
+	display: none;
+}
+
+/*  -----------------------------------------------------------------------------
+			(5c1) LIVE OVERTIME MODULE - DO NOT DISPLAY   */
+/* Below are this styles that Do not display when any given module is set to liveOT */
+.LiveOT .nbaFnlMnRecapDiv, .LiveOT .nbaFnlMnRecap, .LiveOT .nbaFnlStatTx,
+	.LiveOT .nbaFnlStatTxSm, .LiveOT .nbaFnlBtmInfo, .LiveOT .nbaFnlMnSocialDiv,
+	.LiveOT .nbaFnlGmStats, .LiveOT .nbaFnlGmStats table th, .LiveOT .nbaFnlGmStats table th.drkRow,
+	.LiveOT .nbaFnlGmStats table td, .LiveOT .nbaFnlGmStats table td.drkRow,
+	.LiveOT .nbaFnlGmStats table td.gryText, .LiveOT .nbaPreMnButtDiv,
+	.LiveOT .nbaPreMnPreview, .LiveOT .nbaPreMnTickets, .LiveOT .nbaPreInfo,
+	.LiveOT .nbaPreSmText, .LiveOT .nbaPreSmText table, .LiveOT .nbaPreSmText table th,
+	.LiveOT .nbaPreSmText table td, .LiveOT .nbaPreMnScore, .LiveOT .nbaPreMnStatus,
+	.LiveOT .nbaPreStatTx, .LiveOT .nbaPreStatTxSm, .LiveOT .nbaPreNetwkLogo,
+	.LiveOT .nbaPreMnTeamInfo, .LiveOT .nbaPreMnStatusTeamAw, .LiveOT .nbaPreMnStatusTeamHm,
+	.LiveOT .nbaPreMnTmStdg, .LiveOT .nbaPreMnTmStdg table td.spacer,
+	.LiveOT .nbaPreMnTmStdg table th.spacer, .LiveOT .nbaPreMnTmStdg table th,
+	.LiveOT .nbaPreMnTmStdg table td, .LiveOT .nbaPreMnText, .LiveOT .nbaPreMnText a,
+	.LiveOT .nbaPreSSeries, .LiveOT .nbaPreSSeriesHdr, .LiveOT .nbaPreSSeries ul,
+	.LiveOT .nbaPreSSeries ul li, .LiveOT .nbaPreSSeries ul li.last,
+	.LiveOT .nbaPreMnSocialDiv, .LiveOT .nbaPreGmStats, .LiveOT .nbaPreGmStatRw,
+	.LiveOT .nbaPreGmStatRwDk, .LiveOT .nbaPreGmStatsHd, .LiveOT .nbaPreGmStats table th,
+	.LiveOT .nbaPreGmStats table td, .LiveOT .nbaMnStats, .LiveOT .nbaMnQuBoxOT
+	{
+	display: none;
+}
+
+/*  -----------------------------------------------------------------------------
+	(6) RECAP AND RECAP OT MODULE  (for module structure styles go to the 'Shared Styles' non of the styles in this section are shared by any other modules) */
+
+/*  -----------------------------------------------------------------------------
+		(6a) TOP SECTION */
+/*---- Recap modules far left button container  -----*/
+.Recap .nbaFnlMnRecapDiv, .RecapOT .nbaFnlMnRecapDiv {
+	float: left;
+	width: 117px;
+	height: 84px;
+}
+/*---- Recap modules far left button  -----*/
+.Recap .nbaFnlMnRecap, .RecapOT .nbaFnlMnRecap, .Recap .nbaFnlMnRecap2,
+	.RecapOT .nbaFnlMnRecap2 {
+	height: 20px;
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/FlRecap_but.jpg')
+		no-repeat;
+	width: 87px;
+	margin: 25px 15px;
+}
+
+.Recap .nbaFnlMnRecap2, .RecapOT .nbaFnlMnRecap2 {
+	float: left;
+	text-align: center;
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/FlRecap_but2.jpg')
+		no-repeat;
+}
+
+.Recap .nbaFnlMnRecap2 span, .RecapOT .nbaFnlMnRecap2 span {
+	color: #fff;
+	display: block;
+	font-size: 11px;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: 4px 0 0;
+}
+
+.Recap .nbaFnlMnRecap2, .RecapOT .nbaFnlMnRecap2 {
+	float: left;
+	text-align: center;
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/FlRecap_but2.jpg')
+		no-repeat;
+}
+
+.Recap .nbaFnlMnRecap2 span, .RecapOT .nbaFnlMnRecap2 span {
+	color: #fff;
+	display: block;
+	font-size: 11px;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: 4px 0 0;
+}
+
+.Recap a .nbaFnlMnRecap2 span, .RecapOT a .nbaFnlMnRecap2 span {
+	text-decoration: none;
+}
+/*---- Recap modules 'Final' and Time  -----*/
+.Recap .nbaFnlStatTx, .RecapOT .nbaFnlStatTx {
+	font-size: 24px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	color: #000000;
+	margin: 2px auto 0 auto;
+}
+
+.Recap .nbaFnlStatTxSm, .RecapOT .nbaFnlStatTxSm {
+	font-size: 12px;
+	text-transform: uppercase;
+	text-align: center;
+	color: #626262;
+	margin: 0 auto;
+}
+
+/*  -----------------------------------------------------------------------------
+		(6b) BOTTOM SECTION   */
+.Recap .nbaFnlBtmInfo, .RecapOT .nbaFnlBtmInfo {
+	width: 675px;
+	float: left;
+	margin: 10px 0 0 0;
+}
+/*---- Recap modules 'Facebook' and 'Twitter'  -----*/
+.Recap .nbaFnlMnSocialDiv, .RecapOT .nbaFnlMnSocialDiv {
+	float: left;
+	width: 97px;
+	margin: 15px 10px;
+	height: 55px;
+}
+/*---- Recap modules 'Game Stat'  -----*/
+.Recap .nbaFnlGmStats, .RecapOT .nbaFnlGmStats {
+	float: left;
+	width: 357px;
+	height: 61px;
+	margin: 0 25px 0 0;
+}
+
+.Recap .nbaFnlGmStats table th, .RecapOT .nbaFnlGmStats table th {
+	text-align: center;
+	padding: 3px;
+	font-size: 11px;
+	margin: 0;
+	width: 75px;
+	color: #505050;
+}
+
+.Recap .nbaFnlGmStats table th.drkRow, .RecapOT .nbaFnlGmStats table th.drkRow
+	{
+	color: #505050;
+	background-color: #f2f2f2;
+	font-size: 11px;
+	border-bottom: 1px solid #cccccc;
+	border-top: 1px solid #cccccc;
+}
+
+.Recap .nbaFnlGmStats table td, .RecapOT .nbaFnlGmStats table td {
+	text-align: center;
+	font-weight: bold;
+	font-size: 11px;
+	padding: 3px 0;
+	color: #626262;
+}
+
+.Recap .nbaFnlGmStats table td.drkRow, .RecapOT .nbaFnlGmStats table td.drkRow
+	{
+	text-align: center;
+	font-weight: bold;
+	color: #505050;
+	font-size: 11px;
+	background-color: #f2f2f2;
+	border-bottom: 1px solid #cccccc;
+	border-top: 1px solid #cccccc;
+}
+
+.Recap .nbaFnlGmStats table td.gryText, .RecapOT .nbaFnlGmStats table td.gryText
+	{
+	color: #505050;
+}
+/*---- Recap modules 'Season Series'  -----*/
+.Recap .nbaSSeries, .RecapOT .nbaSSeries {
+	float: left;
+	width: 290px;
+	*width: 280px;
+	height: 67px;
+	margin: 0;
+}
+
+/*  -----------------------------------------------------------------------------
+		(6c) RECAP MODULE - DO NOT DISPLAY   */
+/* Below are this styles that Do not display when any given module is set to "Recap" */
+.Recap .nbaLiveMnButtDiv, .Recap .nbaLiveMnGame, .Recap .nbaLiveMnButtTxt,
+	.Recap .nbaLiveMnButtTxt a, .Recap .nbaLiveMnButtTxt a:hover, .Recap .nbaLiveMnTm,
+	.Recap .nbaLiveMnTmLft, .Recap .nbaLiveMnTmRt, .Recap .nbaLiveNetwkLogo,
+	.Recap .nbaLiveStatTx, .Recap .nbaLiveStatTxSm, .Recap .nbaLiveMnSocialDiv,
+	.Recap .nbaLiveBtmInfo .nbaSSeries, .Recap .nbaLiveBtmInfo, .Recap .nbaLiveGmStats,
+	.Recap .nbaLiveGmStats table th, .Recap .nbaLiveGmStats table th.drkRow,
+	.Recap .nbaLiveGmStats table td, .Recap .nbaLiveGmStats table td.drkRow,
+	.Recap .nbaLiveGmStats table td.gryText, .Recap .nbaPreGmWL, .Recap .nbaPreMnButtDiv,
+	.Recap .nbaPreMnPreview, .Recap .nbaPreMnTickets, .Recap .nbaPreInfo,
+	.Recap .nbaPreSmText, .Recap .nbaPreSmText table, .Recap .nbaPreSmText table th,
+	.Recap .nbaPreSmText table td, .Recap .nbaPreMnScore, .Recap .nbaPreMnStatus,
+	.Recap .nbaPreStatTx, .Recap .nbaPreStatTxSm, .Recap .nbaPreNetwkLogo,
+	.Recap .nbaPreMnTeamInfo, .Recap .nbaPreMnStatusTeamAw, .Recap .nbaPreMnStatusTeamHm,
+	.Recap .nbaPreMnTmStdg, .Recap .nbaPreMnTmStdg table td.spacer, .Recap .nbaPreMnTmStdg table th.spacer,
+	.Recap .nbaPreMnTmStdg table th, .Recap .nbaPreMnTmStdg table td,
+	.Recap .nbaPreMnText, .Recap .nbaPreMnText a, .Recap .nbaPreSSeries,
+	.Recap .nbaPreSSeriesHdr, .Recap .nbaPreSSeries ul, .Recap .nbaPreSSeries ul li,
+	.Recap .nbaPreSSeries ul li.last, .Recap .nbaPreMnSocialDiv, .Recap .nbaPreGmStats,
+	.Recap .nbaPreGmStatRw, .Recap .nbaPreGmStatRwDk, .Recap .nbaPreGmStatsHd,
+	.Recap .nbaPreGmStats table th, .Recap .nbaPreGmStats table td, .Recap .nbaMnStatsOT,
+	.Recap .nbaQtrRedOT, .Recap .nbaMnQuBoxOT {
+	display: none;
+}
+
+/*  -----------------------------------------------------------------------------
+			(6c1) RECAP OVERTIME MODULE - DO NOT DISPLAY   */
+/* Below are this styles that Do not display when any given module is set to "RecapOT" */
+.RecapOT .nbaLiveMnButtDiv, .RecapOT .nbaLiveMnGame, .RecapOT .nbaLiveMnButtTxt,
+	.RecapOT .nbaLiveMnButtTxt a, .RecapOT .nbaLiveMnButtTxt a:hover,
+	.RecapOT .nbaLiveMnTm, .RecapOT .nbaLiveMnTmLft, .RecapOT .nbaLiveMnTmRt,
+	.RecapOT .nbaLiveNetwkLogo, .RecapOT .nbaLiveStatTx, .RecapOT .nbaLiveStatTxSm,
+	.RecapOT .nbaLiveMnSocialDiv, .RecapOT .nbaLiveMnSocialDiv, .RecapOT .nbaLiveBtmInfo .nbaSSeries,
+	.RecapOT .nbaLiveBtmInfo, .RecapOT .nbaLiveGmStats, .RecapOT .nbaLiveGmStats table th,
+	.RecapOT .nbaLiveGmStats table th.drkRow, .RecapOT .nbaLiveGmStats table td,
+	.RecapOT .nbaLiveGmStats table td.drkRow, .RecapOT .nbaLiveGmStats table td.gryText,
+	.RecapOT .nbaPreGmWL, .RecapOT .nbaPreMnButtDiv, .RecapOT .nbaPreMnPreview,
+	.RecapOT .nbaPreMnTickets, .RecapOT .nbaPreInfo, .RecapOT .nbaPreSmText,
+	.RecapOT .nbaPreSmText table, .RecapOT .nbaPreSmText table th, .RecapOT .nbaPreSmText table td,
+	.RecapOT .nbaPreMnScore, .RecapOT .nbaPreMnStatus, .RecapOT .nbaPreStatTx,
+	.RecapOT .nbaPreStatTxSm, .RecapOT .nbaPreNetwkLogo, .RecapOT .nbaPreMnTeamInfo,
+	.RecapOT .nbaPreMnStatusTeamAw, .RecapOT .nbaPreMnStatusTeamHm,
+	.RecapOT .nbaPreMnTmStdg, .RecapOT .nbaPreMnTmStdg table td.spacer,
+	.RecapOT .nbaPreMnTmStdg table th.spacer, .RecapOT .nbaPreMnTmStdg table th,
+	.RecapOT .nbaPreMnTmStdg table td, .RecapOT .nbaPreMnText, .RecapOT .nbaPreMnText a,
+	.RecapOT .nbaPreSSeries, .RecapOT .nbaPreSSeriesHdr, .RecapOT .nbaPreSSeries ul,
+	.RecapOT .nbaPreSSeries ul li, .RecapOT .nbaPreSSeries ul li.last,
+	.RecapOT .nbaPreMnSocialDiv, .RecapOT .nbaPreGmStats, .RecapOT .nbaPreGmStatRw,
+	.RecapOT .nbaPreGmStatRwDk, .RecapOT .nbaPreGmStatsHd, .RecapOT .nbaPreGmStats table th,
+	.RecapOT .nbaPreGmStats table td, .RecapOT .nbaMnStats, .RecapOT .nbaMnQuBoxOT
+	{
+	display: none;
+}
+
+/*  -----------------------------------------------------------------------------
+	(7) FINAL MODULE  (for module structure styles go to the 'Shared Styles' non of the styles in this section are shared by any other modules) */
+
+/*  -----------------------------------------------------------------------------
+		(7a) TOP SECTION   */
+/*---- Final modules far left button container  -----*/
+.Final .nbaLiveMnGame, .FinalOT .nbaLiveMnGame, .Final .nbaLiveMnGame2,
+	.FinalOT .nbaLiveMnGame2 {
+	height: 20px;
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/nbaLive_but.jpg')
+		no-repeat;
+	width: 87px;
+	margin: 7px 15px 0;
+}
+
+.Final .nbaLiveMnGame2, .FinalOT .nbaLiveMnGame2 {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/nbaLive_but2.jpg')
+		no-repeat;
+}
+
+.Final .nbaLiveMnGame2, .FinalOT .nbaLiveMnGame2 {
+	height: 20px;
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/nbaLive_but2.jpg')
+		no-repeat;
+	width: 87px;
+	margin: 7px 15px 0;
+}
+
+.Final .nbaFnlMnRecapDiv, .FinalOT .nbaFnlMnRecapDiv {
+	float: left;
+	width: 117px;
+	height: 84px;
+}
+/*---- Recap modules far left button  -----*/
+.Final .nbaFnlMnRecap, .FinalOT .nbaFnlMnRecap, .Final .nbaFnlMnRecap2,
+	.FinalOT .nbaFnlMnRecap2 {
+	height: 20px;
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/FlRecap_but.jpg')
+		no-repeat;
+	width: 87px;
+	margin: 25px 15px;
+}
+
+.Final .nbaFnlMnRecap2, .FinalOT .nbaFnlMnRecap2 {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/FlRecap_but2.jpg')
+		no-repeat;
+}
+/*---- Recap modules 'Final' and Time  -----*/
+.Final .nbaFnlStatTx, .FinalOT .nbaFnlStatTx {
+	font-size: 24px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	color: #000000;
+	margin: 2px auto 0 auto;
+}
+
+.Final .nbaFnlStatTxSm, .FinalOT .nbaFnlStatTxSm {
+	font-size: 12px;
+	text-transform: uppercase;
+	text-align: center;
+	color: #626262;
+	margin: 0 auto;
+}
+
+/*  -----------------------------------------------------------------------------
+		(7b) BOTTOM SECTION   */
+.Final .nbaFnlBtmInfo, .FinalOT .nbaFnlBtmInfo {
+	width: 675px;
+	float: left;
+	margin: 10px 0 0 0;
+}
+/*---- Final modules 'Facebook' and 'Twitter'  -----*/
+.Final .nbaFnlMnSocialDiv, .FinalOT .nbaFnlMnSocialDiv {
+	float: left;
+	width: 97px;
+	margin: 15px 10px;
+	height: 55px;
+}
+/*---- Final modules 'Game Stat'  -----*/
+.Final .nbaFnlGmStats, .FinalOT .nbaFnlGmStats {
+	float: left;
+	width: 357px;
+	height: 61px;
+	margin: 0 25px 0 0;
+}
+
+.Final .nbaFnlGmStats table th, .FinalOT .nbaFnlGmStats table th {
+	text-align: left;
+	padding: 3px;
+	font-size: 11px;
+	margin: 0;
+	width: 75px;
+	color: #505050;
+}
+
+.Final .nbaFnlGmStats table th.drkRow, .FinalOT .nbaFnlGmStats table th.drkRow
+	{
+	color: #505050;
+	background-color: #f2f2f2;
+	font-size: 11px;
+	border-bottom: 1px solid #cccccc;
+	border-top: 1px solid #cccccc;
+}
+
+.Final .nbaFnlGmStats table td, .FinalOT .nbaFnlGmStats table td {
+	text-align: center;
+	font-weight: bold;
+	font-size: 11px;
+	padding: 3px 0;
+	color: #626262;
+}
+
+.Final .nbaFnlGmStats table td.drkRow, .FinalOT .nbaFnlGmStats table td.drkRow
+	{
+	text-align: center;
+	font-weight: bold;
+	color: #505050;
+	font-size: 11px;
+	background-color: #f2f2f2;
+	border-bottom: 1px solid #cccccc;
+	border-top: 1px solid #cccccc;
+}
+
+.Final .nbaFnlGmStats table td.gryText, .FinalOT .nbaFnlGmStats table td.gryText
+	{
+	color: #505050;
+}
+/*---- Final modules 'Season Series'  -----*/
+.Final .nbaSSeries, .FinalOT .nbaSSeries {
+	float: left;
+	width: 290px;
+	*width: 280px;
+	height: 67px;
+	margin: 0;
+}
+
+/*  -----------------------------------------------------------------------------
+		(7c) FINAL MODULE - DO NOT DISPLAY   */
+/* Below are this styles that Do not display when any given module is set to "Final" */
+.Final .nbaLiveMnButtDiv, /*.Final .nbaLiveMnGame,*/ .RFinal .nbaLiveMnButtTxt,
+	.Final .nbaLiveMnButtTxt a, .Final .nbaLiveMnButtTxt a:hover, .Final .nbaLiveMnTm,
+	.Final .nbaLiveMnTmLft, .Final .nbaLiveMnTmRt, .Final .nbaLiveNetwkLogo,
+	.Finalp .nbaLiveStatTx, .Final .nbaLiveStatTxSm, .Final .nbaLiveMnSocialDiv,
+	.Final .nbaLiveMnSocialDiv, .Final .nbaLiveBtmInfo .nbaSSeries, .Final .nbaLiveBtmInfo,
+	.Final .nbaLiveGmStats, .Final .nbaLiveGmStats table th, .Final .nbaLiveGmStats table th.drkRow,
+	.Final .nbaLiveGmStats table td, .Final .nbaLiveGmStats table td.drkRow,
+	.Final .nbaLiveGmStats table td.gryText, .Final .nbaPreGmWL, .Final .nbaPreMnButtDiv,
+	.Final .nbaPreMnPreview, .Final .nbaPreMnTickets, .Final .nbaPreInfo,
+	.Final .nbaPreSmText, .Final .nbaPreSmText table, .Final .nbaPreSmText table th,
+	.Final .nbaPreSmText table td, .Final .nbaPreMnScore, .Final .nbaPreMnStatus,
+	.Final .nbaPreStatTx, .Final .nbaPreStatTxSm, .Final .nbaPreNetwkLogo,
+	.Final .nbaPreMnTeamInfo, .Final .nbaPreMnStatusTeamAw, .Final .nbaPreMnStatusTeamHm,
+	.Final .nbaPreMnTmStdg, .Final .nbaPreMnTmStdg table td.spacer, .Final .nbaPreMnTmStdg table th.spacer,
+	.Final .nbaPreMnTmStdg table th, .Final .nbaPreMnTmStdg table td,
+	.Final .nbaPreMnText, .Final .nbaPreMnText a, .Final .nbaPreSSeries,
+	.Final .nbaPreSSeriesHdr, .Final .nbaPreSSeries ul, .Final .nbaPreSSeries ul li,
+	.Final .nbaPreSSeries ul li.last, .Final .nbaPreMnSocialDiv, .Final .nbaPreGmStats,
+	.Final .nbaPreGmStatRw, .Final .nbaPreGmStatRwDk, .Final .nbaPreGmStatsHd,
+	.Final .nbaPreGmStats table th, .Final .nbaPreGmStats table td, .Final .nbaMnStatsOT,
+	.Final .nbaQtrRedOT, .Final .nbaMnQuBoxOT, .Final .nbaFnlMnRecap,
+	.Final .nbaLiveStatTx {
+	display: none;
+}
+
+/*  -----------------------------------------------------------------------------
+			(7c1) FINAL OVERTIME MODULE - DO NOT DISPLAY   */
+/* Below are this styles that Do not display when any given module is set to "FinalOT" */
+.FinalOT .nbaLiveMnButtDiv, /*.FinalOT .nbaLiveMnGame,*/ .FinalOT .nbaLiveMnButtTxt,
+	.FinalOT .nbaLiveMnButtTxt a, .FinalOT .nbaLiveMnButtTxt a:hover,
+	.FinalOT .nbaLiveMnTm, .FinalOT .nbaLiveMnTmLft, .FinalOT .nbaLiveMnTmRt,
+	.FinalOT .nbaLiveNetwkLogo, .FinalOT .nbaLiveStatTx, .FinalOT .nbaLiveStatTxSm,
+	.FinalOT .nbaLiveMnSocialDiv, .FinalOT .nbaLiveMnSocialDiv, .FinalOT .nbaLiveBtmInfo .nbaSSeries,
+	.FinalOT .nbaLiveBtmInfo, .FinalOT .nbaLiveGmStats, .FinalOT .nbaLiveGmStats table th,
+	.FinalOT .nbaLiveGmStats table th.drkRow, .FinalOT .nbaLiveGmStats table td,
+	.FinalOT .nbaLiveGmStats table td.drkRow, .FinalOT .nbaLiveGmStats table td.gryText,
+	.FinalOT .nbaPreGmWL, .FinalOT .nbaPreMnButtDiv, .FinalOT .nbaPreMnPreview,
+	.FinalOT .nbaPreMnTickets, .FinalOT .nbaPreInfo, .FinalOT .nbaPreSmText,
+	.FinalOT .nbaPreSmText table, .FinalOT .nbaPreSmText table th, .FinalOT .nbaPreSmText table td,
+	.FinalOT .nbaPreMnScore, .FinalOT .nbaPreMnStatus, .FinalOT .nbaPreStatTx,
+	.FinalOT .nbaPreStatTxSm, .FinalOT .nbaPreNetwkLogo, .FinalOT .nbaPreMnTeamInfo,
+	.FinalOT .nbaPreMnStatusTeamAw, .FinalOT .nbaPreMnStatusTeamHm,
+	.FinalOT .nbaPreMnTmStdg, .FinalOT .nbaPreMnTmStdg table td.spacer,
+	.FinalOT .nbaPreMnTmStdg table th.spacer, .RecapOT .nbaPreMnTmStdg table th,
+	.FinalOT .nbaPreMnTmStdg table td, .FinalOT .nbaPreMnText, .FinalOT .nbaPreMnText a,
+	.FinalOT .nbaPreSSeries, .FinalOT .nbaPreSSeriesHdr, .FinalOT .nbaPreSSeries ul,
+	.FinalOT .nbaPreSSeries ul li, .FinalOT .nbaPreSSeries ul li.last,
+	.FinalOT .nbaPreMnSocialDiv, .FinalOT .nbaPreGmStats, .FinalOT .nbaPreGmStatRw,
+	.FinalOT .nbaPreGmStatRwDk, .FinalOT .nbaPreGmStatsHd, .FinalOT .nbaPreGmStats table th,
+	.FinalOT .nbaPreGmStats table td, .FinalOT .nbaMnStats, .FinalOT .nbaFnlMnRecap,
+	.FinalOT .nbaMnQuBoxOT {
+	display: none;
+}
+
+/*  -----------------------------------------------------------------------------
+	(8) SHARED STYLES   */
+/* ALERT! - IMPORTANT - This class sets the modules states, 
+		   and begins the cascading attributes for each */
+.Recap, .Live, .Pre, .RecapOT, .LiveOT, .Final, .FinalOT {
+	width: 899px;
+}
+/*  Container for Away team infomation for all module states */
+.Recap .nbaModTopTeamAw, .Live .nbaModTopTeamAw, .Pre .nbaModTopTeamAw,
+	.RecapOT .nbaModTopTeamAw, .LiveOT .nbaModTopTeamAw, .FinalOT .nbaModTopTeamAw,
+	.FinalOT .nbaModTopTeamAw {
+	float: left;
+	width: 130px;
+	height: 22px;
+	margin: 0;
+}
+/*  Container for Home team infomation for all module states */
+.Recap .nbaModTopTeamHm, .Live .nbaModTopTeamHm, .Pre .nbaModTopTeamHm,
+	.RecapOT .nbaModTopTeamHm, .LiveOT .nbaModTopTeamHm, .Final .nbaModTopTeamHm,
+	.FinalOT .nbaModTopTeamHm {
+	float: left;
+	width: 130px;
+	height: 22px;
+	margin: 7px 0 0 0;
+}
+/*  Text for team abbrev. for all module states */
+.Recap .nbaModTopTeamName, .Live .nbaModTopTeamName, .Pre .nbaModTopTeamName,
+	.RecapOT .nbaModTopTeamName, .LiveOT .nbaModTopTeamName, .Final .nbaModTopTeamName,
+	.FinalOT .nbaModTopTeamName {
+	float: left;
+	width: 37px;
+	margin: 4px 0 0 6px;
+	font-size: 12px;
+	font-weight: bold;
+	color: #000000;
+	text-transform: uppercase;
+}
+/*  Team logo icon container for all module states */
+.Recap .nbaMnTeamLogo, .Live .nbaMnTeamLogo, .Pre .nbaMnTeamLogo,
+	.RecapOT .nbaMnTeamLogo, .LiveOT .nbaMnTeamLogo, .Final .nbaMnTeamLogo,
+	.FinalOT .nbaMnTeamLogo {
+	float: left;
+	width: 35px;
+	height: 22px;
+	margin: 0;
+	text-align: center;
+}
+/*  Team score container for all module states */
+.Recap .nbaModTopTeamNum, .Live .nbaModTopTeamNum, .RecapOT .nbaModTopTeamNum,
+	.LiveOT .nbaModTopTeamNum, .Final .nbaModTopTeamNum, .FinalOT .nbaModTopTeamNum
+	{
+	float: left;
+	color: #000000;
+	height: 21px;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	margin: 0 0 0 5px;
+}
+
+.winner {
+	float: right;
+	position: relative;
+	left: 5px;
+	font-weight: bold;
+	color: #000;
+}
+/*  Season Series header text for all module states */
+.Recap .nbaSSeriesHdr, .Live .nbaSSeriesHdr, .Pre .nbaSSeriesHdr,
+	.RecapOT .nbaSSeriesHdr, .LiveOT .nbaSSeriesHdr, .Final .nbaSSeriesHdr,
+	.FinalOT .nbaSSeriesHdr {
+	color: #505050;
+	padding: 4px 0;
+	font-weight: bold;
+}
+
+/*  -----------------------------------------------------------------------------
+		(8a) PREVIEW AND LIVE  (the styles in this section are shared by the preview and live modules only) */
+
+/*  Watch and Listen table info (Bottom Section) */
+.Live .nbaPreGmWL, .LiveOT .nbaPreGmWL, .Pre .nbaPreGmWL {
+	float: left;
+	width: 250px;
+	margin: 5px 7px 0 10px;
+	*margin: 5px 3px 0 3px;
+}
+
+.Live .nbaPreGmWL table, .LiveOT .nbaPreGmWL table, .Pre .nbaPreGmWL table
+	{
+	width: 245px;
+}
+
+.Live .nbaPreGmWL table th, .LiveOT .nbaPreGmWL table th, .Pre .nbaPreGmWL table th
+	{
+	font-weight: bold;
+	text-align: left;
+	font-size: 11px;
+	text-transform: uppercase;
+	border-bottom: 1px dashed #cccccc;
+	padding: 4px;
+}
+
+.Live .nbaPreGmWL table td, .LiveOT .nbaPreGmWL table td, .Pre .nbaPreGmWL table td
+	{
+	padding: 2px;
+	color: #626262;
+	font-size: 11px;
+}
+
+.Live .nbaPreGmWL a, .LiveOT .nbaPreGmWL a, .Pre .nbaPreGmWL a {
+	color: #177bc7;
+	text-decoration: none;
+}
+
+.Live .nbaPreGmWL a:hover, .LiveOT .nbaPreGmWL a:hover, .Pre .nbaPreGmWL a:hover
+	{
+	color: #177bc7;
+	text-decoration: underline;
+}
+
+/*  -----------------------------------------------------------------------------
+		(8b) LIVE, RECAP, FINAL, AND ALL OVERTIME  (the styles in this section are shared by the live, recap, final and all overtime modules) */
+.Recap .nbaNoBorder, .Live .nbaNoBorder, .RecapOT .nbaNoBorder, .LiveOT .nbaNoBorder,
+	.Final .nbaNoBorder, .FinalOT .nbaNoBorder {
+	position: relative;
+	height: 84px;
+	margin: 0 5px 0 0;
+	border-bottom: none;
+}
+
+.Recap .Dotted, .Live .Dotted, .RecapOT .Dotted, .LiveOT .Dotted, .Final .Dotted,
+	.FinalOT .Dotted {
+	border-bottom: 1px dashed #cccccc;
+}
+/*----  Middle containing div for top section information ----*/
+.Recap .nbaModTopInfo, .Live .nbaModTopInfo, .RecapOT .nbaModTopInfo,
+	.LiveOT .nbaModTopInfo, .Final .nbaModTopInfo, .FinalOT .nbaModTopInfo
+	{
+	width: 655px;
+	float: left;
+}
+
+.nbaModTopInfo img {
+	float: left;
+}
+/*---- Container for game status, time, network, team name, logo and score -----*/
+.Recap .nbaModTopScore, .Live .nbaModTopScore, .RecapOT .nbaModTopScore,
+	.LiveOT .nbaModTopScore, .Final .nbaModTopScore, .FinalOT .nbaModTopScore
+	{
+	float: left;
+	width: 247px;
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/FlScore_bck.gif')
+		no-repeat;
+	padding: 5px;
+	height: 51px;
+}
+/*  Game status, time and network information */
+.Recap .nbaModTopStatus, .Live .nbaModTopStatus, .RecapOT .nbaModTopStatus,
+	.LiveOT .nbaModTopStatus, .Final .nbaModTopStatus, .FinalOT .nbaModTopStatus
+	{
+	float: left;
+	width: 98px;
+	height: 55px;
+	margin: 0 7px 0 0;
+	text-align: center;
+}
+/*---- Container for scoring table -----*/
+.Recap .nbaMnQuScores, .Live .nbaMnQuScores, .Final .nbaMnQuScores {
+	float: left;
+	height: 59px;
+	border-bottom: 1px solid #e7e6e6;
+	border-top: 1px solid #e7e6e6;
+}
+/*  Score table */
+.Recap .nbaMnQuScores table td.score, .RecapOT .nbaMnQuScores table td.score,
+	.Final .nbaMnQuScores table td.score, .FinalOT .nbaMnQuScores table td.score,
+	.Live .nbaMnQuScores table td.score, .LiveOT .nbaMnQuScores table td.score
+	{
+	height: 25px;
+	*height: 24px;
+	width: 26px;
+	font-size: 12px;
+	color: #626262;
+	text-align: center;
+	vertical-align: middle;
+	border-left: 1px solid #e7e6e6;
+}
+/*  Score tracking table */
+.Recap .nbaMnQuScores table td.bar, .RecapOT .nbaMnQuScores table td.bar,
+	.Final .nbaMnQuScores table td.bar, .FinalOT .nbaMnQuScores table td.bar,
+	.Live .nbaMnQuScores table td.bar, .LiveOT .nbaMnQuScores table td.bar
+	{
+	height: 5px;
+	*height: 1px;
+	font-size: 8px;
+	padding: 0px;
+	margin: 0px;
+	background-color: #efefef;
+	border-left: 1px solid #ffffff;
+}
+/*  Score tracker bar (red line) */
+.Recap .nbaQtrRed, .Live .nbaQtrRed, .Final .nbaQtrRed, .RecapOT .nbaQtrRedOT,
+	.LiveOT .nbaQtrRedOT, .FinalOT .nbaQtrRedOT, .RecapOT .nbaQtrRed,
+	.LiveOT .nbaQtrRed, .FinalOT .nbaQtrRed {
+	height: 9px;
+	background: #cc0000;
+	margin: 0;
+	padding: 0;
+}
+/*  Score Total */
+.Recap .nbaMnScrBox, .Live .nbaMnScrBox, .RecapOT .nbaMnScrBox, .Final .nbaMnScrBox,
+	.FinalOT .nbaMnScrBox, .LiveOT .nbaMnScrBox {
+	float: left;
+	width: 35px;
+	height: 59px;
+	margin: 0 15px 0 0;
+	border: 1px solid #e7e6e6;
+}
+/*  Score Total table cells */
+.Recap .nbaMnScrBox table td, .Live .nbaMnScrBox table td, .RecapOT .nbaMnScrBox table td,
+	.Final .nbaMnScrBox table td, .FinalOT .nbaMnScrBox table td, .LiveOT .nbaMnScrBox table td
+	{
+	*height: 29px;
+}
+/*  Score Total for Away team */
+.Recap .nbaMnScrNum, .Live .nbaMnScrNum, .RecapOT .nbaMnScrNum, .LiveOT .nbaMnScrNum,
+	.Final .nbaMnScrNum, .FinalOT .nbaMnScrNum {
+	width: 35px;
+	height: 30px;
+	*height: 23px;
+	border-bottom: 1px solid #e7e6e6;
+	font-size: 14px;
+	font-weight: bold;
+	color: #000000;
+	text-align: center;
+	vertical-align: middle;
+}
+/*  Score Total for Home team */
+.Recap .nbaMnScrNumHm, .Live .nbaMnScrNumHm, .RecapOT .nbaMnScrNumHm,
+	.LiveOT .nbaMnScrNumHm, .Final .nbaMnScrNumHm, .FinalOT .nbaMnScrNumHm
+	{
+	width: 35px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #000000;
+	text-align: center;
+	vertical-align: middle;
+}
+/*---- Game stats table -----*/
+.Recap .nbaMnStats, .Live .nbaMnStats, .Final .nbaMnStats {
+	float: left;
+	width: 220px;
+	margin: 0 10px 0 0;
+	*margin: 0 3px 0 0;
+}
+
+.Recap .nbaMnStats table th, .Live .nbaMnStats table th, .Final .nbaMnStats table th
+	{
+	text-align: left;
+	padding: 0;
+	font-size: 11px;
+	margin: 0;
+	color: #505050;
+	text-transform: uppercase;
+}
+
+.Recap .nbaMnStats table td, .Live .nbaMnStats table td, .Final .nbaMnStats table td
+	{
+	text-align: left;
+	padding: 1px 0;
+	font-size: 10px;
+	color: #707070;
+	border-bottom: 1px dashed #cccccc;
+}
+
+.Recap .nbaMnStats table td.blkText, .Live .nbaMnStats table td.blkText,
+	.Final .nbaMnStats table td.blkText {
+	text-align: center;
+	width: 30px;
+	padding: 1px 5px 0 3px;
+	font-size: 10px;
+	color: #000000;
+	border-bottom: 1px dashed #cccccc;
+}
+
+.Recap .nbaMnStats table td.gryText, .Live .nbaMnStats table td.gryText,
+	.RecapOT .nbaMnStats table td.gryText, .LiveOT .nbaMnStats table td.gryText,
+	.Final .nbaMnStats table td.gryText, .FinalOT .nbaMnStats table td.gryText
+	{
+	text-align: center;
+	font-weight: bold;
+	font-size: 10px;
+	width: 10px;
+	padding: 1px 3px 0 0;
+	color: #707070;
+	text-transform: uppercase;
+	border-bottom: 1px dashed #cccccc;
+}
+/*---- Container for Video -----*/
+.Recap .nbaModTopMnHlt, .Live .nbaModTopMnHlt, .RecapOT .nbaModTopMnHlt,
+	.LiveOT .nbaModTopMnHlt, .Final .nbaModTopMnHlt, .FinalOT .nbaModTopMnHlt
+	{
+	float: left;
+	width: 82px;
+}
+
+.Live .nbaMnHltHdr, .LiveOT .nbaMnHltHdr, .Recap .nbaMnHltHdr, .FinalOT .nbaMnHltHdr,
+	.Final .nbaMnHltHdr, .RecapOT .nbaMnHltHdr {
+	text-align: left;
+	font-weight: bold;
+	font-size: 10px;
+	padding: 0;
+	margin: 0 0 5px 0;
+	color: #505050;
+}
+
+.Live .nbaVideoLeft, .LiveOT .nbaVideoLeft, .Recap .nbaVideoLeft,
+	.FinalOT .nbaVideoLeft, .Final .nbaVideoLeft, .RecapOT .nbaVideoLeft {
+	width: 72px;
+	height: 55px;
+	float: left;
+	border: 1px solid #cccccc;
+}
+
+.Live .nbaVideoWrapper, .LiveOT .nbaVideoWrapper, .Recap .nbaVideoWrapper,
+	.FinalOT .nbaVideoWrapper, .Final .nbaVideoWrapper, .RecapOT .nbaVideoWrapper
+	{
+	position: relative;
+	width: 70px;
+	height: 53px;
+}
+
+.Live .nbaVideoWrapper img, .LiveOT .nbaVideoWrapper img, .Recap .nbaVideoWrapper img,
+	.FinalOT .nbaVideoWrapper img, .Final .nbaVideoWrapper img, .RecapOT .nbaVideoWrapper img
+	{
+	border: 1px solid #FFFFFF;
+}
+
+.Live .nbaVideoOverlay, .LiveOT .nbaVideoOverlay, .Recap .nbaVideoOverlay,
+	.FinalOT .nbaVideoOverlay, .Final .nbaVideoOverlay, .RecapOT .nbaVideoOverlay
+	{
+	cursor: pointer;
+	left: 53px;
+	position: absolute;
+	top: 35px;
+	width: 17px;
+	height: 17px;
+	border: none !important;
+}
+
+/*---- Container for Top Section Footer Text -----*/
+.Recap .nbaModTopFtr, .Live .nbaModTopFtr, .RecapOT .nbaModTopFtr,
+	.Final .nbaModTopFtr, .FinalOT .nbaModTopFtr, .LiveOT .nbaModTopFtr {
+	width: 650px;
+	float: left;
+}
+/* Complete Stats */
+.Recap .nbaMnStatsFtr, .Live .nbaMnStatsFtr, .RecapOT .nbaMnStatsFtr,
+	.Final .nbaMnStatsFtr, .FinalOT .nbaMnStatsFtr, .LiveOT .nbaMnStatsFtr
+	{
+	text-align: right;
+	margin: 5px 0 0 0;
+	width: 80px;
+	float: right;
+}
+
+.Recap .nbaMnStatsFtr a, .Live .nbaMnStatsFtr a, .RecapOT .nbaMnStatsFtr a,
+	.Final .nbaMnStatsFtr a, .FinalOT .nbaMnStatsFtr a, .LiveOT .nbaMnStatsFtr a
+	{
+	font-weight: bold;
+	font-size: 10px;
+	color: #115991;
+	text-decoration: none;
+}
+/* Top Section Footer Text */
+.Recap .nbaMnTextFtr, .Live .nbaMnTextFtr, .RecapOT .nbaMnTextFtr,
+	.Final .nbaMnTextFtr, .FinalOT .nbaMnTextFtr, .LiveOT .nbaMnTextFtr {
+	margin: 5px 0 0 0;
+	/*width:600px;*/
+	font-size: 10px;
+	color: #707070;
+	float: left;
+}
+
+.Recap .nbaMnTextFtr a, .Live .nbaMnTextFtr a, .RecapOT .nbaMnTextFtr a,
+	.Final .nbaMnTextFtr a, .FinalOT .nbaMnTextFtr a, .LiveOT .nbaMnTextFtr a
+	{
+	color: #115991;
+	text-decoration: none;
+}
+/* Top Section Footer Text hovers */
+.Recap .nbaMnTextFtr a:hover, .Live .nbaMnStatsFtr a:hover, .RecapOT .nbaMnTextFtr a:hover,
+	.Final .nbaMnStatsFtr a:hover, .FinalOT .nbaMnTextFtr a:hover, .LiveOT .nbaMnStatsFtr a:hover,
+	.Pre #nbaPreMnText a:hover, .nbaMnTextFtr a:hover, .nbaMnStatsFtr a:hover,
+	#nbaButtonLink a:hover {
+	color: #115991;
+	text-decoration: underline;
+}
+
+/* Season Series formatting */
+.Recap .nbaSSeries ul, .Live .nbaSSeries ul, .RecapOT .nbaSSeries ul,
+	.Final .nbaSSeries ul, .FinalOT .nbaSSeries ul, .LiveOT .nbaSSeries ul
+	{
+	margin: 0;
+	padding: 0;
+}
+/* Season Series */
+.Recap .nbaSSeries ul li, .Live .nbaSSeries ul li, .RecapOT .nbaSSeries ul li,
+	.Final .nbaSSeries ul li, .FinalOT .nbaSSeries ul li, .LiveOT .nbaSSeries ul li
+	{
+	padding: 5px 6px 5px 0;
+	list-style: none;
+	display: inline-block;
+	*display: inline;
+	font-weight: bold;
+	font-size: 0.9em;
+	border-bottom: 1px dashed #cccccc;
+	*border-bottom: none;
+}
+
+.Recap .nbaSSeries ul li.last, .Live .nbaSSeries ul li.last, .RecapOT .nbaSSeries ul li.last,
+	.Final .nbaSSeries ul li.last, .FinalOT .nbaSSeries ul li.last, .LiveOT .nbaSSeries ul li.last
+	{
+	border-bottom: none;
+}
+
+.Recap .nbaMnSocialFB, .Live .nbaMnSocialFB, .RecapOT .nbaMnSocialFB,
+	.Final .nbaMnSocialFB, .FinalOT .nbaMnSocialFB, .LiveOT .nbaMnSocialFB,
+	.Pre .nbaMnSocialFB {
+	height: 24px;
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/facebook.jpg')
+		no-repeat;
+	width: 24px;
+	margin: 5px;
+}
+
+.Recap .nbaMnSocialTW, .Live .nbaMnSocialTW, .RecapOT .nbaMnSocialTW,
+	.Final .nbaMnSocialTW, .FinalOT .nbaMnSocialTW, .LiveOT .nbaMnSocialTW,
+	.Pre .nbaMnSocialTW {
+	height: 24px;
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/twitter.jpg')
+		no-repeat;
+	width: 24px;
+	margin: 5px;
+}
+
+.Live .nbaModOuterBarBckSmPre, .Recap .nbaModOuterBarBckSmPre, .LiveOT .nbaModOuterBarBckSmPre,
+	.Final .nbaModOuterBarBckSmPre, .FinalOT .nbaModOuterBarBckSmPre,
+	.RecapOT .nbaModOuterBarBckSmPre {
+	position: absolute;
+	left: 950px;
+	width: 25px;
+	height: 55px;
+	_height: 95px;
+	padding: 40px 0 0 5px;
+	_padding: 40px 0 0 3px;
+	float: left;
+	background: #F2F2F2;
+	background-position: 0px 20px;
+	margin: 0 0 10px;
+	_margin: 0;
+	margin-top: -15px;
+}
+
+.Recap .BarLg, .Live .BarLg, .LiveOT .BarLg, .RecapOT .BarLg, .Final .BarLg,
+	.RecapOT .BarLg, .FinalOT .BarLg {
+	height: 130px;
+	_height: 180px;
+}
+/* .win class added to nbaModTopTeamNum to denote team winner */
+.Recap .win, .RecapOT .win, .Live .win, .LiveOT .win, .Final .win,
+	.FinalOT .win {
+	color: #c60000 !important;
+}
+/*  -----------------------------------------------------------------------------
+		(8c) LIVE OT, RECAP OT AND FINAL OT  */
+.RecapOT .nbaMnQuScores, .LiveOT .nbaMnQuScores, .FinalOT .nbaMnQuScores
+	{
+	float: left;
+	height: 59px;
+	border-bottom: 1px solid #e7e6e6;
+	border-top: 1px solid #e7e6e6;
+}
+
+.RecapOT .nbaMnQuScores table td.nbaMnQuBoxOT, .LiveOT .nbaMnQuScores table td.nbaMnQuBoxOT,
+	.FinalOT .nbaMnQuScores table td.nbaMnQuBoxOT {
+	height: 25px;
+	*height: 19px;
+	width: 26px;
+	font-size: 12px;
+	background-color: #efefef;
+	color: #626262;
+	text-align: center;
+	border-left: 1px solid #ffffff;
+	vertical-align: middle;
+}
+
+.RecapOT .nbaMnStatsOT, .LiveOT .nbaMnStatsOT, .FinalOT .nbaMnStatsOT {
+	float: left;
+	margin: 0 auto;
+	height: 40px;
+	width: 38px;
+	padding: 20px 15px 0 0;
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.nbaShowOT {
+	display: table-cell !important;
+	*display: inline !important;
+}
+
+.nbaShowOTbar {
+	display: inline-block !important;
+}
+
+.nbaHideOTbar {
+	display: none;
+}
+
+/
+.Pre .nbaPreInfo {
+	width: 766px;
+}
+
+.Pre .nbaPreMnTmStdg {
+	width: 247px;
+	position: relative;
+	top: -22px;
+}
+
+.Pre .nbaPreMnScore {
+	width: 508px;
+}
+
+.Pre .nbaPreInfo {
+	width: 766px;
+}
+
+.Pre .nbaPreMnTmStdg table th {
+	text-align: center;
+}
+
+.Recap .nbaMnQuScores table, .Live .nbaMnQuScores {
+	
+}
+
+.Recap .nbaMnQuScores th, .Live .nbaMnQuScores, .Final .nbaMnQuScores  th,
+	.Recap .nbaMnQuScores th, .Live .nbaMnQuScores th, .Final .nbaMnQuScores th
+	{
+	text-align: center;
+	vertical-align: middle;
+}
+
+.Recap .nbaModTopInfo, .Live .nbaModTopInfo, .RecapOT .nbaModTopInfo,
+	.LiveOT .nbaModTopInfo, .Final .nbaModTopInfo, .FinalOT .nbaModTopInfo
+	{
+	width: 681px;
+}
+
+.nbaModOuterBox {
+	padding-top: 26px;
+}
+
+.Recap .nbaMnQuScores table th, .RecapOT .nbaMnQuScores table th, .Final .nbaMnQuScores table th,
+	.FinalOT .nbaMnQuScores table th, .Live .nbaMnQuScores table th,
+	.LiveOT .nbaMnQuScores table th {
+	text-align: center;
+	vertical-align: middle;
+	height: 25px;
+}
+
+.Recap .nbaMnQuScores, .Live .nbaMnQuScores, .Final .nbaMnQuScores,
+	.RecapOT .nbaMnQuScores, .LiveOT .nbaMnQuScores, .FinalOT .nbaMnQuScores
+	{
+	height: 54px;
+	border-top: 0px;
+	position: relative;
+	top: -23px;
+}
+
+/*  -----------------------------------------------------------------------------
+	(9) TEAM PAGE   */
+.nbaTeamHdInfo {
+	width: 890px;
+	margin: 5px auto;
+	_margin: 5px 15px;
+}
+
+/*  -----------------------------------------------------------------------------
+		(9a) Header */
+#nbaTeamHeader {
+	width: 250px;
+	float: left;
+	padding: 0;
+	font-size: 22px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #000000;
+}
+
+.nbaTmHdBox {
+	width: 700px;
+	float: left;
+	font-size: 11px;
+}
+/*  -----------------------------------------------------------------------------
+		(9b) Teams & Stats */
+#nbaTmOverStats {
+	float: left;
+	width: 325px;
+	height: 61px;
+	margin: 2px 20px 10px 0;
+}
+
+#nbaTmOverStats table th {
+	text-align: left;
+	padding: 2px;
+	margin: 0;
+	font-size: 11px;
+	color: #505050;
+	text-transform: uppercase;
+}
+
+#nbaTmOverStats table th.drkRow {
+	color: #505050;
+	background-color: #f2f2f2;
+	border-bottom: 1px solid #cccccc;
+	border-top: 1px solid #cccccc;
+}
+
+#nbaTmOverStats table td {
+	text-align: center;
+	padding: 2px 0;
+	color: #626262;
+}
+
+#nbaTmOverStats table td.drkRow {
+	text-align: center;
+	color: #505050;
+	font-size: 11px;
+	background-color: #f2f2f2;
+	border-bottom: 1px solid #cccccc;
+	border-top: 1px solid #cccccc;
+}
+
+#nbaTmOverStats table td.gryText {
+	color: #505050;
+	font-size: 11px;
+}
+/*  -----------------------------------------------------------------------------
+		(9c) Leaders */
+#nbaTmLeadStats {
+	margin: 0 0 10px 0;
+}
+
+#nbaTeamLdHd {
+	font-weight: bold;
+	color: #6F6F6F;
+	font-size: 11px;
+	text-align: left;
+	text-transform: uppercase;
+	padding: 0 0 5px;
+}
+
+#nbaTmLeadStats table td {
+	border-right: 1px solid #CCCCCC;
+	color: #6F6F6F;
+	font-size: 11px;
+	padding: 0 0 0 10px;
+}
+
+#nbaTmLeadStats table td.first {
+	border-right: 1px solid #CCCCCC;
+	color: #6F6F6F;
+	font-size: 11px;
+	padding: 0;
+}
+
+#nbaTmLeadStats table td.last {
+	border-right: none;
+	color: #6F6F6F;
+	padding: 0 0 0 10px;
+}
+
+.nbaTmStBlkTxt {
+	color: #000000;
+}
+
+.nbaTmStGryTxt {
+	color: #626262;
+}
+
+.nbaSSeries {
+	padding-top: 5px;
+}
+/*  -----------------------------------------------------------------------------
+		(9d) Team Logo */
+#nbaTeamHdLogo {
+	width: 150px;
+	height: 96px;
+	float: right;
+	margin: 0 0 0 15px;
+}
+
+.tmATL {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/LG/ATL.gif')
+		no-repeat;
+}
+
+.tmBOS {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/LG/BOS.gif')
+		no-repeat;
+}
+
+.tmCHI {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/LG/CHI.gif')
+		no-repeat;
+}
+
+.tmCHA {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/LG/CHA.gif')
+		no-repeat;
+}
+
+.tmCHA_Hornets {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/LG/CHA_Hornets.gif')
+		no-repeat;
+}
+
+.tmCLE {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/LG/CLE.gif')
+		no-repeat;
+}
+
+.tmDAL {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/LG/DAL.gif')
+		no-repeat;
+}
+
+.tmDEN {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/LG/DEN.gif')
+		no-repeat;
+}
+
+.tmDET {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/LG/DET.gif')
+		no-repeat;
+}
+
+.tmGSW {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/LG/GSW.gif')
+		no-repeat;
+}
+
+.tmHOU {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/LG/HOU.gif')
+		no-repeat;
+}
+
+.tmIND {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/LG/IND.gif')
+		no-repeat;
+}
+
+.tmLAL {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/LG/LAL.gif')
+		no-repeat;
+}
+
+.tmLAC {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/LG/LAC.gif')
+		no-repeat;
+}
+
+.tmMEM {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/LG/MEM.gif')
+		no-repeat;
+}
+
+.tmMIA {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/LG/MIA.gif')
+		no-repeat;
+}
+
+.tmMIL {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/LG/MIL.gif')
+		no-repeat;
+}
+
+.tmMIN {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/LG/MIN.gif')
+		no-repeat;
+}
+
+.tmNJN {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/LG/NJN.gif')
+		no-repeat;
+}
+
+.tmBKN {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/LG/BKN.gif')
+		no-repeat;
+}
+
+.tmNOH {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/LG/NOH.gif')
+		no-repeat;
+}
+
+.tmNOP {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/LG/NOP.gif')
+		no-repeat;
+}
+
+.tmNYK {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/LG/NYK.gif')
+		no-repeat;
+}
+
+.tmOKC {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/LG/OKC.gif')
+		no-repeat;
+}
+
+.tmORL {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/LG/ORL.gif')
+		no-repeat;
+}
+
+.tmPHI {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/LG/PHI.gif')
+		no-repeat;
+}
+
+.tmPHX {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/LG/PHO.gif')
+		no-repeat;
+}
+
+.tmPOR {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/LG/POR.gif')
+		no-repeat;
+}
+
+.tmSAC {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/LG/SAC.gif')
+		no-repeat;
+}
+
+.tmSAS {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/LG/SAS.gif')
+		no-repeat;
+}
+
+.tmTOR {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/LG/TOR.gif')
+		no-repeat;
+}
+
+.tmUTA {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/LG/UTH.gif')
+		no-repeat;
+}
+
+.tmWAS {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/LG/WAS.gif')
+		no-repeat;
+}
+
+/*-----Style International Logos -----------*/
+.tmAJM {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameinfo/teamlogos/AJM.gif')
+		no-repeat;
+}
+
+.tmMHA {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameinfo/teamlogos/MHA.gif')
+		no-repeat;
+}
+
+.tmCLA {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameinfo/teamlogos/CLA.gif')
+		no-repeat;
+}
+
+.tmBAR {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameinfo/teamlogos/BAR.gif')
+		no-repeat;
+}
+
+.tmMOS {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameinfo/teamlogos/MOS.gif')
+		no-repeat;
+}
+
+/*-----D-League Logo -----------*/
+.tmDLS {
+	background:
+		url('http://i.cdn.turner.com/nba/nba/.element/img/2.0/sect/gameline/teams/LG/DLS.gif')
+		no-repeat;
+}
+
+/*  -----------------------------------------------------------------------------
+	(10) GAMELINE FOOTER ADS */
+#nbaTeamFullList {
+	width: 919px;
+	width: 997px;
+	height: 740px;
+	overflow: auto;
+	position: relative;
+	float: left;
+	margin: 0 0 15px 0;
+}
+
+#nbaGLfooterAd {
+	width: 925px;
+	margin: 0 auto 20px;
+	_margin: 0 0 20px 10px;
+}
+
+.nbaGLftrAdPods {
+	float: left;
+	margin: 0 0 5px 0;
+	border-right: 1px solid #fff;
+	margin-top: 10px;
+}
